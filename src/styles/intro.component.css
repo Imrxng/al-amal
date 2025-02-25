@@ -1,0 +1,21 @@
+#intro {
+    height: 87vh;
+    background-color: var(--foreground);
+    padding-top: 10rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#intro > div {
+    background-color: var(--background);
+    height: 90%;
+    margin: 0 2rem;
+    border: 2rem #1b4a5c solid; 
+    border-radius: 10px;
+}
+
+#intro > div > p {
+    color: black;
+    background-color: var(--background);
+}

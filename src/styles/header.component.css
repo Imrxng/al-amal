@@ -1,0 +1,79 @@
+.button {
+    width: 150px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background);
+    border-radius: 20px;
+    background-color: var(--foreground);
+    font-weight: 700;
+    font-size: large;
+}
+
+#topHeader {
+    background-color: var(--secondary);
+    height: 4rem;
+    position: sticky;  width: 100%;
+    z-index: 1001; 
+    transition: opacity 0.3s ease;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+        color: var(--background);
+    font-weight: bolder;
+}
+
+#prayerIcon {
+    width: 4rem;
+    height: 7rem;
+}
+
+
+
+#header {
+    background-color: var(--background);
+    height: 10rem;
+    padding: 25px;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: margin-top 0.3s ease;
+    width: 100%;
+}
+
+
+.link {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: large;
+    transition-duration: 0.5s;
+}
+
+.link:hover {
+    color: var(--secondary-font);
+    transition-duration: 0.5s;
+}
+
+.button:hover {
+    background-color: var(--background);
+    border: 3px var(--foreground) solid;
+    color: var(--foreground);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    color: var(--background);
+    font-size: x-large
+}
