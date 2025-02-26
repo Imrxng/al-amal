@@ -1,5 +1,5 @@
 #intro {
-    height: 87vh;
+    height: 100vh;
     background-color: var(--foreground);
     padding-top: 10rem;
     color: white;
@@ -7,15 +7,50 @@
     justify-content: center;
     align-items: center;
 }
-#intro > div {
+
+#box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
     background-color: var(--background);
     height: 90%;
-    margin: 0 2rem;
+    margin: 0 12rem;
     border: 2rem #1b4a5c solid; 
     border-radius: 10px;
+    padding: 0 3rem;
+    background-size: 20px 20px; 
 }
 
-#intro > div > p {
-    color: black;
+#box > div {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+
+}
+
+#box > div > h1 {
+    font-size: 60px;
+    line-height: 72px;
     background-color: var(--background);
+    padding-bottom: 1rem; 
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px; 
+}
+
+
+#box > div > p {
+     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px; 
+    background-color: var(--background);
+    text-align: left;
+    width: 95%;
+    padding-bottom: 2rem;
+}
+
+#box > img {
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
 }

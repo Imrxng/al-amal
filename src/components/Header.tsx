@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import logo from '../assets/images/logo.webp';
-import prayerIcon from '../assets/icons/sujud.webp';
 import Link from 'next/link';
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaQuran } from "react-icons/fa";
+import LinkButton from './LinkButton';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 40) {
+            if (window.scrollY > 1) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -43,7 +43,7 @@ const Header = () => {
                 <p id='time'>Isha 21:30</p>
                 </div>
             </div>
-            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "3rem" }}>
+            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "2rem"}}>
                 <Image src={logo} alt="logo Amal" width={300} />
                 <div className='nav'>
                     <Link href="/" className='link'>Home</Link>
@@ -52,8 +52,8 @@ const Header = () => {
                     <Link href="/contact" className='link'>Contact</Link>
                 </div>
                 <div className='nav'>
-                    <Link href="/lid-worden" className="button">Lid worden</Link>
-                    <Link href="/doneren" className="button">Doneren</Link>
+                    <LinkButton href="/lid-worden" content="Lid worden" />
+                    <LinkButton href="/doneren" content="Doneren" />
                 </div>
             </div>
         </>

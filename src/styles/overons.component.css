@@ -1,0 +1,84 @@
+#over-ons-container {
+    min-height: 30vh;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    padding: 10rem 10rem 5rem 10rem;
+    color: black;
+}
+
+#over-ons-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 50%;
+    text-align: left;
+}
+
+#over-ons-content>h2 {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+    line-height: 50px;
+    font-weight: 600;
+    color: black;
+    padding-bottom: 1rem;
+}
+
+#over-ons-content>p {
+    color: black;
+    padding-bottom: 2rem;
+}
+
+#over-ons-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#over-ons-icons > p {
+    font-size: 18px;
+    padding-bottom: 2rem;
+}
+.button-grey-bg:first-child {
+    height: 50px;
+    width: 150px;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.button-grey-bg:hover:first-child {
+    background-color: var(--secondary);
+    color: var(--background);
+    border: 3px var(--background) solid;
+
+}
+
+.button-grey-bg:nth-child(2){
+    height: 50px;
+    width: 150px;
+    background-color: var(--secondary);
+    color: var(--background);
+    border: 3px var(--background) solid;
+}
+
+.button-grey-bg:hover:nth-child(2) {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.over-ons-icon-container {
+    display: flex;
+    width: calc(50% - 20px);
+    gap: 1rem;
+}
+
+#buttons-over-ons {
+    display: flex;
+    gap: 1rem;
+}
+
+#over-ons-container>img {
+    width: 50%;
+    height: auto;
+}

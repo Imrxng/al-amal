@@ -1,4 +1,4 @@
-.button {
+.button, .button-grey-bg, .button-white-bg {
     width: 150px;
     height: 50px;
     display: inline-flex;
@@ -16,14 +16,18 @@
     height: 4rem;
     position: sticky;  width: 100%;
     z-index: 1001; 
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s ease;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 2rem;
         color: var(--background);
     font-weight: bolder;
+}
+
+.nav > p {
+    font-size: 16px;
 }
 
 #prayerIcon {
@@ -36,15 +40,20 @@
 #header {
     background-color: var(--background);
     height: 10rem;
-    padding: 25px;
-    padding-top: 0;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
-    transition: margin-top 0.3s ease;
+    transition: margin-top 0.1s ease;
     width: 100%;
+}
+
+#header > img 
+{
+  border-right: 1px white solid;
+
 }
 
 
@@ -60,7 +69,7 @@
     transition-duration: 0.5s;
 }
 
-.button:hover {
+.button:hover, .button-grey-bg:hover, .button-white-bg:hover {
     background-color: var(--background);
     border: 3px var(--foreground) solid;
     color: var(--foreground);

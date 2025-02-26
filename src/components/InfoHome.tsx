@@ -1,0 +1,29 @@
+import React from 'react'
+import { FaDonate, FaQuran } from "react-icons/fa";
+import Link from 'next/link';
+
+const InfoHome = () => {
+  return (
+    <div id='info-home-container'>
+        <div className='info-home'>
+            <div className='info-home-text'>
+                <h3>Wat kunt u doen?</h3>
+                <h2>Bijdragen</h2>
+                <Link href={'/doneren'} className='button-white-bg'>DONEREN &#10145;</Link>
+            </div>
+            <FaDonate className='icon'/>
+        </div>
+        <div className='info-home'>
+            <div className='info-home-text'>
+                <h3>Leeftijd van 6-16 jaar</h3>
+                <h2>Weekendonderwijs</h2>
+                <Link href={'/weekend-onderwijs'} className='button-white-bg'>LEES MEER &#10145;</Link>
+
+            </div>
+            <FaQuran className='icon'/>
+        </div>
+    </div>
+  )
+}
+
+export default InfoHome;
