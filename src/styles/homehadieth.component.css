@@ -1,0 +1,35 @@
+#container-al-aqsa {
+    background-color: var(--foreground);
+    height: 35rem;
+    width: 100%;
+    padding: 2rem 10rem 5rem 10rem;
+}
+
+#image-al-aqsa {
+    background-image: url('../assets/images/al-aqsa.webp');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+
+#image-al-aqsa q {
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  #image-al-aqsa p {
+    font-size: 1.2rem;
+  }

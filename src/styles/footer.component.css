@@ -1,4 +1,16 @@
 #footer {
     min-height: 40vh;
     background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-copyright {
+    border-top: 1px solid var(--foreground);
+    text-align: center;
+}
+
+
+#footer-copyright>p {
+    font-size: 14px;
 }

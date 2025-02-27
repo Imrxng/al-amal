@@ -3,6 +3,7 @@
     background-color: var(--secondary);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10rem 10rem 5rem 10rem;
     color: black;
 }
@@ -79,6 +80,8 @@
 }
 
 #over-ons-container>img {
-    width: 50%;
+    width: 40%;
     height: auto;
+    border-radius: 10px;
+    border: 4px var(--background) solid;
 }

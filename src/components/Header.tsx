@@ -35,7 +35,7 @@ const Header = () => {
                     </div>
                     <div className='nav' style={{gap: 5}}>
                         <IoIosMail className='icon' />
-                        <a href="mailto:alamal@gmail.com">alamal@gmail.com</a>
+                        <a href="mailto:moskee.alamal@gmail.com">moskee.alamal@gmail.com</a>
                     </div>
                 </div>
                 <div className='nav' style={{gap: 5}}>

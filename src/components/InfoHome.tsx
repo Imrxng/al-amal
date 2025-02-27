@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 const InfoHome = () => {
   return (
-    <div id='info-home-container'>
+    <>
+        <div id='info-home-container'>
         <div className='info-home'>
             <div className='info-home-text'>
                 <h3>Wat kunt u doen?</h3>
@@ -23,6 +24,7 @@ const InfoHome = () => {
             <FaQuran className='icon'/>
         </div>
     </div>
+    </>
   )
 }
 

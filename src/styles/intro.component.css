@@ -1,7 +1,7 @@
 #intro {
-    height: 100vh;
     background-color: var(--foreground);
-    padding-top: 10rem;
+    padding-top: 12rem;
+    padding-bottom: 4rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -11,22 +11,21 @@
 #box {
     display: flex;
     flex-direction: row;
-    align-items: center;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
     background-color: var(--background);
-    height: 90%;
-    margin: 0 12rem;
+    margin: 0 10rem;
     border: 2rem #1b4a5c solid; 
     border-radius: 10px;
-    padding: 0 3rem;
+    padding: 3rem;
     background-size: 20px 20px; 
+    justify-content: space-between;
 }
 
 #box > div {
-        display: flex;
-        flex-direction: column;
-        height: 80%;
-
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 50%;
 }
 
 #box > div > h1 {
@@ -49,8 +48,7 @@
 }
 
 #box > img {
-    width: 50%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 10px 0 0 10px;
+    width: 45%;
+    height: 25rem;
+    border-radius: 10px;
 }

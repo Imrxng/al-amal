@@ -1,8 +1,7 @@
 import React from 'react'
 import { FaMosque } from "react-icons/fa";
-import LinkButton from './LinkButton';
 import Image from 'next/image';
-import mosquepic from '../assets/images/moskee.webp';
+import sfeerbeeld from '../assets/images/sfeerbeeld-1.webp';
 import Link from 'next/link';
 
 const OverOns = () => {
@@ -43,7 +42,7 @@ const OverOns = () => {
                     <Link href={'/over-ons'} className='button-grey-bg'>Over ons</Link>
                 </div>
             </div>
-            <Image src={mosquepic} width={200} alt='gebedsruimte' />
+            <Image src={sfeerbeeld} alt='gebedsruimte' />
         </div>
     )
 }
