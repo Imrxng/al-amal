@@ -8,6 +8,8 @@ import LinkButton from './LinkButton';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [gebedstijden, setGebedstijden] = useState(null);
+    const [nextGebed, setNextGebed] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,13 +19,63 @@ const Header = () => {
                 setIsScrolled(false);
             }
         };
-
+        handleScroll();
         window.addEventListener('scroll', handleScroll);
+
+        // API-aanroep om gebedstijden op te halen
+        const fetchGebedstijden = async () => {
+            try {
+                const response = await fetch('/api/gebedstijden'); // Je API-endpoint
+                const data = await response.json();
+                console.log("Gebedstijden opgehaald:", data);
+                setGebedstijden(data);
+
+                // Bereken de volgende gebedstijd
+                if (data) {
+                    setNextGebed(getNextGebed(data));
+                }
+            } catch (error) {
+                console.error("Fout bij het ophalen van de gebedstijden", error);
+            }
+        };
+
+        fetchGebedstijden();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    // Helperfunctie om de volgende gebedstijd te berekenen
+    const getNextGebed = (data) => {
+        const gebedstijden = [
+            { naam: "Fajr", tijd: data.fajr },
+            { naam: "Dhuhr", tijd: data.dhuhr },
+            { naam: "Asr", tijd: data.asr },
+            { naam: "Maghrib", tijd: data.maghrib },
+            { naam: "Isha", tijd: data.isha }
+        ];
+
+        const currentTime = new Date();
+        const currentTimeString = currentTime.getHours() * 60 + currentTime.getMinutes(); // Tijd in minuten vanaf 00:00
+
+        for (let gebed of gebedstijden) {
+            // Zorg ervoor dat de tijd een geldige string is voordat we splitten
+            if (gebed.tijd && typeof gebed.tijd === 'string' && gebed.tijd.includes(":")) {
+                const [uur, minuut] = gebed.tijd.split(":").map((time) => parseInt(time));
+                const gebedTijdString = uur * 60 + minuut;
+
+                if (gebedTijdString > currentTimeString) {
+                    return gebed;  // Retourneer het volgende gebed
+                }
+            } else {
+                console.error(`Ongeldige tijd voor ${gebed.naam}: ${gebed.tijd}`);
+            }
+        }
+
+        // Als er geen "volgende" tijd is, geef de eerste van de dag terug (start opnieuw)
+        return gebedstijden[0];
+    };
 
     return (
         <>
@@ -31,7 +83,7 @@ const Header = () => {
                 <div className='nav'>
                     <div className='nav' style={{gap: 5}}>
                         <IoIosCall className='icon' />
-                        <a href="tel:0485158565">0485158565</a>
+                        <a href="tel:0488413095">0488413095</a>
                     </div>
                     <div className='nav' style={{gap: 5}}>
                         <IoIosMail className='icon' />
@@ -39,11 +91,16 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='nav' style={{gap: 5}}>
-                <FaQuran className='icon'/>
-                <p id='time'>Isha 21:30</p>
+                    <FaQuran className='icon'/>
+                    {/* Controleer of de gebedstijden beschikbaar zijn voordat we de volgende gebedstijd weergeven */}
+                    {nextGebed ? (
+                        <p id='time'>{nextGebed.naam} {nextGebed.tijd}</p>
+                    ) : (
+                        <p id='time'>Laden...</p>
+                    )}
                 </div>
             </div>
-            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "2rem"}}>
+            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "2rem", height: isScrolled ? '8rem' : '10rem'}}>
                 <Image src={logo} alt="logo Amal" width={300} />
                 <div className='nav'>
                     <Link href="/" className='link'>Home</Link>
@@ -58,6 +115,6 @@ const Header = () => {
             </div>
         </>
     );
-}
+};
 
 export default Header;

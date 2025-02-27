@@ -18,7 +18,7 @@ const InfoHome = () => {
             <div className='info-home-text'>
                 <h3>Leeftijd van 6-16 jaar</h3>
                 <h2>Weekendonderwijs</h2>
-                <Link href={'/weekend-onderwijs'} className='button-white-bg'>LEES MEER &#10145;</Link>
+                <Link href={'/onderwijs'} className='button-white-bg'>LEES MEER &#10145;</Link>
 
             </div>
             <FaQuran className='icon'/>

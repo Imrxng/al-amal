@@ -39,7 +39,6 @@
 
 #header {
     background-color: var(--background);
-    height: 10rem;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
