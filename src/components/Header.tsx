@@ -6,10 +6,23 @@ import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaQuran } from "react-icons/fa";
 import LinkButton from './LinkButton';
 
+interface Gebedstijden {
+    fajr: string;
+    dhuhr: string;
+    asr: string;
+    maghrib: string;
+    isha: string;
+}
+
+interface Gebed {
+    naam: string;
+    tijd: string;
+}
+
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [gebedstijden, setGebedstijden] = useState(null);
-    const [nextGebed, setNextGebed] = useState(null);
+    const [gebedstijden, setGebedstijden] = useState<Gebedstijden | null>(null);
+    const [nextGebed, setNextGebed] = useState<Gebed | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,15 +35,12 @@ const Header = () => {
         handleScroll();
         window.addEventListener('scroll', handleScroll);
 
-        // API-aanroep om gebedstijden op te halen
         const fetchGebedstijden = async () => {
             try {
-                const response = await fetch('/api/gebedstijden'); // Je API-endpoint
+                const response = await fetch('/api/gebedstijden');
                 const data = await response.json();
-                console.log("Gebedstijden opgehaald:", data);
                 setGebedstijden(data);
 
-                // Bereken de volgende gebedstijd
                 if (data) {
                     setNextGebed(getNextGebed(data));
                 }
@@ -46,8 +56,7 @@ const Header = () => {
         };
     }, []);
 
-    // Helperfunctie om de volgende gebedstijd te berekenen
-    const getNextGebed = (data) => {
+    const getNextGebed = (data: Gebedstijden) => {
         const gebedstijden = [
             { naam: "Fajr", tijd: data.fajr },
             { naam: "Dhuhr", tijd: data.dhuhr },
@@ -57,23 +66,17 @@ const Header = () => {
         ];
 
         const currentTime = new Date();
-        const currentTimeString = currentTime.getHours() * 60 + currentTime.getMinutes(); // Tijd in minuten vanaf 00:00
+        const currentTimeString = currentTime.getHours() * 60 + currentTime.getMinutes();
 
         for (let gebed of gebedstijden) {
-            // Zorg ervoor dat de tijd een geldige string is voordat we splitten
             if (gebed.tijd && typeof gebed.tijd === 'string' && gebed.tijd.includes(":")) {
                 const [uur, minuut] = gebed.tijd.split(":").map((time) => parseInt(time));
                 const gebedTijdString = uur * 60 + minuut;
-
                 if (gebedTijdString > currentTimeString) {
-                    return gebed;  // Retourneer het volgende gebed
+                    return gebed;
                 }
-            } else {
-                console.error(`Ongeldige tijd voor ${gebed.naam}: ${gebed.tijd}`);
             }
         }
-
-        // Als er geen "volgende" tijd is, geef de eerste van de dag terug (start opnieuw)
         return gebedstijden[0];
     };
 
@@ -81,18 +84,17 @@ const Header = () => {
         <>
             <div id='topHeader' style={{ opacity: isScrolled ? 0 : 1 }}>
                 <div className='nav'>
-                    <div className='nav' style={{gap: 5}}>
+                    <div className='nav' style={{ gap: 5 }}>
                         <IoIosCall className='icon' />
                         <a href="tel:0488413095">0488413095</a>
                     </div>
-                    <div className='nav' style={{gap: 5}}>
+                    <div className='nav' style={{ gap: 5 }}>
                         <IoIosMail className='icon' />
                         <a href="mailto:moskee.alamal@gmail.com">moskee.alamal@gmail.com</a>
                     </div>
                 </div>
-                <div className='nav' style={{gap: 5}}>
-                    <FaQuran className='icon'/>
-                    {/* Controleer of de gebedstijden beschikbaar zijn voordat we de volgende gebedstijd weergeven */}
+                <div className='nav' style={{ gap: 5 }}>
+                    <FaQuran className='icon' />
                     {nextGebed ? (
                         <p id='time'>{nextGebed.naam} {nextGebed.tijd}</p>
                     ) : (
@@ -100,7 +102,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "2rem", height: isScrolled ? '8rem' : '10rem'}}>
+            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "2rem", height: isScrolled ? '8rem' : '10rem' }}>
                 <Image src={logo} alt="logo Amal" width={300} />
                 <div className='nav'>
                     <Link href="/" className='link'>Home</Link>

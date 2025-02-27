@@ -18,24 +18,17 @@ export default async function handler(
     const url = 'https://mawaqit.net/nl/w/alamal-antwerpen?showOnly5PrayerTimes=0';
 
     try {
-      // Haal de HTML op van de website
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Netwerkfout bij het ophalen van de HTML");
       }
 
-      // Verkrijg de HTML als tekst
       const html = await response.text();
       
-      // Laad de HTML in cheerio om deze te parseren
       const $ = cheerio.load(html);
 
-      // Zoek naar het script dat de array bevat
       const scriptContent =$.html();
-      console.log(scriptContent);
-      console.log('h');
-      
-      // Zoek de data binnen de script tag, bijvoorbeeld een JSON-achtige structuur
+
       const confDataMatch = scriptContent?.match(/var confData = ({.*?});/);
 
       if (confDataMatch) {
@@ -61,7 +54,6 @@ export default async function handler(
   }
 
   try {
-    // Haal de gebedstijden op en stuur ze terug naar de client
     const prayerTimes = await getPrayerTimesFromWebsite();
     res.status(200).json(prayerTimes);
   } catch (error) {
