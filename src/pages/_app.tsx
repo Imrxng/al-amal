@@ -5,6 +5,7 @@ import "@/styles/intro.component.css";
 import "@/styles/homehadieth.component.css";
 import "@/styles/overons.component.css";
 import "@/styles/infohome.component.css";
+import "@/styles/gebedstijden.component.css";
 
 import type { AppProps } from "next/app";
 

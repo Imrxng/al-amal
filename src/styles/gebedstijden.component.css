@@ -1,0 +1,44 @@
+#gebedstijden-container {
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+#gebedstijden-intro {
+    display: flex;
+    flex-direction: column;
+    width: 80% !important;
+    margin: 0 8rem !important;
+}
+
+#gebedstijden-content {
+    background-color: var(--secondary);
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 10rem;
+    color: black;
+}
+
+#gebedstijden-widget {
+    padding-bottom: 2rem;
+}
+
+#gebedstijden-widget > h2, #gebedstijden-download > h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+#gebedstijden-download > a {
+    font-weight: 600;
+    background-color: var(--background);
+    color: var(--foreground);
+    width: 250px;
+}
+
+#gebedstijden-download > a:hover {
+    background-color: var(--secondary);
+    color: var(--background);
+    border: var(--background) solid 3px;
+}
