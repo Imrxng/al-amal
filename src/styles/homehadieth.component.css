@@ -6,7 +6,7 @@
 }
 
 #image-al-aqsa {
-    background-image: url('@/assets/images/al-aqsa.webp');
+    background-image: url('../assets/images/al-aqsa.webp');
     height: 100%;
     width: 100%;
     background-size: cover;
