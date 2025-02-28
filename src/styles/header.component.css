@@ -13,7 +13,7 @@
 
 #topHeader {
     background-color: var(--secondary);
-    height: 4rem;
+    height: 5rem;
     position: sticky;  width: 100%;
     z-index: 1001; 
     transition: opacity 0.1s ease;
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 2rem 2rem 2rem;
         color: var(--background);
     font-weight: bolder;
 }
@@ -39,6 +39,7 @@
 
 #header {
     background-color: var(--background);
+    height: 8rem;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
@@ -47,6 +48,7 @@
     top: 0;
     transition: margin-top 0.1s ease;
     width: 100%;
+    z-index: 1001;
 }
 
 #header > img 

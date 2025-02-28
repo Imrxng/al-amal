@@ -33,7 +33,8 @@ export default async function handler(
 
       if (confDataMatch) {
         const confData = JSON.parse(confDataMatch[1]);
-
+        console.log(confData.times);
+        
         const times = confData.times;
 
         return {

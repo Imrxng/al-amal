@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { FaLocationDot, FaSquareFacebook } from "react-icons/fa6";
 import { IoIosMail, IoIosCall } from "react-icons/io";
-import logo from '../assets/images/logo.webp';
+import logo from '@/assets/images/logo.webp';
 import Link from 'next/link';
 import { AiFillInstagram } from 'react-icons/ai';
 
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
           <div id='footer-adress-item'>
             <IoIosCall />
-            <a href="tel:0488413095">0488413095</a>
+            <a href="tel:+32488413095">+32488413095</a>
           </div>
         </div>
         <div className='footer-nav'>

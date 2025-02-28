@@ -1,0 +1,42 @@
+#not-found {
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    height: 35rem;
+    justify-content: center;
+}
+
+#not-found > p:first-child {
+    color: var(--secondary-font);
+    text-transform: uppercase;
+}
+
+#not-found-text {
+    font-size: 14px;
+    padding-bottom: 1rem;
+}
+
+#not-found > h1 >span {
+    color: var(--secondary-font);
+    text-transform: uppercase;
+}
+
+#not-found > h1  {
+    padding: 01rem 0
+}
+
+
+#not-found > p > a {
+    text-decoration: underline;
+}
+
+#not-found > a {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+#not-found > a:hover {
+    color: var(--background);
+    border: 3px solid var(--background);
+    background-color: var(--secondary);
+}

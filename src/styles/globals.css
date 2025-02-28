@@ -99,8 +99,9 @@ meter {
 :root {
   --background: #1F4E5F;
   --foreground: #FFFFFF;
-  --secondary: #D3D3D3;
+  --secondary: #f9f9f9;
   --secondary-font: #00C3A7;
+  --gray: #58595b;
 }
 html {
   scroll-behavior: smooth;
@@ -128,4 +129,10 @@ body {
 p {
   font-size: 20px;
     line-height: 30px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 600;
 }

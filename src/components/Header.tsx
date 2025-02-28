@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import logo from '../assets/images/logo.webp';
+import logo from '@/assets/images/logo.webp';
 import Link from 'next/link';
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaQuran } from "react-icons/fa";
@@ -8,10 +8,10 @@ import LinkButton from './LinkButton';
 
 interface Gebedstijden {
     fajr: string;
-    dhuhr: string;
+    dhoehr: string;
     asr: string;
     maghrib: string;
-    isha: string;
+    ishaa: string; 
 }
 
 interface Gebed {
@@ -59,15 +59,15 @@ const Header = () => {
     const getNextGebed = (data: Gebedstijden) => {
         const gebedstijden = [
             { naam: "Fajr", tijd: data.fajr },
-            { naam: "Dhuhr", tijd: data.dhuhr },
+            { naam: "Dhuhr", tijd: data.dhoehr },
             { naam: "Asr", tijd: data.asr },
             { naam: "Maghrib", tijd: data.maghrib },
-            { naam: "Isha", tijd: data.isha }
+            { naam: "Isha", tijd: data.ishaa }
         ];
 
         const currentTime = new Date();
         const currentTimeString = currentTime.getHours() * 60 + currentTime.getMinutes();
-
+        
         for (let gebed of gebedstijden) {
             if (gebed.tijd && typeof gebed.tijd === 'string' && gebed.tijd.includes(":")) {
                 const [uur, minuut] = gebed.tijd.split(":").map((time) => parseInt(time));
@@ -86,7 +86,7 @@ const Header = () => {
                 <div className='nav'>
                     <div className='nav' style={{ gap: 5 }}>
                         <IoIosCall className='icon' />
-                        <a href="tel:0488413095">0488413095</a>
+                        <a href="tel:+32488413095">+32488413095</a>
                     </div>
                     <div className='nav' style={{ gap: 5 }}>
                         <IoIosMail className='icon' />
@@ -102,7 +102,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem", paddingTop: isScrolled ? '0' : "2rem", height: isScrolled ? '8rem' : '10rem' }}>
+            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem" }}>
                 <Image src={logo} alt="logo Amal" width={300} />
                 <div className='nav'>
                     <Link href="/" className='link'>Home</Link>

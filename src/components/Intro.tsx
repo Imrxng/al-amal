@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-import mosquePicture from '../assets/images/moskee.webp';
+import mosquePicture from '@/assets/images/moskee.webp';
 import Link from 'next/link';
 
 const Intro = () => {

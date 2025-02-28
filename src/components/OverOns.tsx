@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaMosque } from "react-icons/fa";
 import Image from 'next/image';
-import sfeerbeeld from '../assets/images/sfeerbeeld-1.webp';
+import sfeerbeeld from '@/assets/images/sfeerbeeld-1.webp';
 import Link from 'next/link';
 
 const OverOns = () => {

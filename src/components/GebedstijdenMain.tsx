@@ -1,29 +1,10 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
-import LinkButton from './LinkButton';
+import React from 'react'
 
 const GebedstijdenMain = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 1) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <>
-      <div id='gebedstijden-container' style={{ paddingTop: isScrolled ? '10rem' : '14rem' }}>
+      <div id='gebedstijden-container'>
         <div id='gebedstijden-intro'>
           <h1>Gebedstijden ECC De Hoop</h1>
           <p>Hieronder vind u onze gebedstijden. U kunt deze gebedstijden downloaden en afprinten!</p>
