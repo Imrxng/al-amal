@@ -20,6 +20,7 @@ const FormContact = () => {
     setMessage('');
 
     const trimmedName = name.trim();
+    const trimmedSurName = surname.trim();
     const trimmedEmail = email.trim();
     const trimmedMessage = messageText.trim();
 
@@ -33,6 +34,14 @@ const FormContact = () => {
       setMessage("Voornaam is verplicht.");
       return;
     }
+
+    if (!trimmedSurName) {
+      setLoading(false);
+      setError(true);
+      setMessage("Voornaam is verplicht.");
+      return;
+    }
+
 
     if (!trimmedEmail) {
       setLoading(false);
@@ -121,7 +130,7 @@ const FormContact = () => {
       <div id='form-contact-content'>
         <label htmlFor="name">Voornaam <span id='red'>*</span></label>
         <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} />
-        <label htmlFor="surname">Achternaam</label>
+        <label htmlFor="surname">Achternaam <span id='red'>*</span></label>
         <input type="text" name='surname' value={surname} onChange={(e) => setSurname(e.target.value)} />
         <label htmlFor="phone">Telefoonnummer</label>
         <input type="text" name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} />

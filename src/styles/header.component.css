@@ -1,4 +1,4 @@
-.button, .button-grey-bg, .button-white-bg, #gebedstijden-download > a  {
+.button, .button-grey-bg, .button-white-bg, #gebedstijden-download > a, #formbutton  {
     width: 150px;
     height: 50px;
     display: inline-flex;

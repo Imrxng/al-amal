@@ -1,21 +1,114 @@
+#form-contact-container {
+  background-color: var(--secondary);
+  color: var(--gray);
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+#form-contact-content {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  width: 40%;
+}
+
+#map-content-info > h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#map-content > h3 {
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+
+#map-content > h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  font-weight: 700;
+}
+
+#map-content-info > p {
+  font-size: 14px;
+}
+
+#form-contact-content>label {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+#form-contact-content>input,
+#form-contact-content>select,
+#form-contact-content>textarea {
+  background-color: var(--foreground);
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+#formbutton {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+
+#formbutton:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  border: 3px solid var(--background);
+  cursor: pointer;
+}
+
+#map-container {
+  display: flex;
+  background-color: var(--background);
+  width: 100%;
+  color: var(--foreground);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+#red {
+  color: red;
+}
+
 .spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid var(--secondary-font);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    animation: spin 2s linear infinite;
-    margin-left: 10px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--secondary-font);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  #message-container p {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
+}
+
+#message-container p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+#message-container {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+#form-contact-content p {
+  margin: 0;
+  transition: all 0.3s ease;
+}
