@@ -13,14 +13,14 @@
 
 #topHeader {
     background-color: var(--secondary);
-    height: 5rem;
     position: relative;  
     width: 100%;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 0 2rem;
+    height: 3rem;
     color: var(--background);
     font-weight: bolder;
 }
