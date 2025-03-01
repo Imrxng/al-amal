@@ -1,11 +1,14 @@
 #intro, #gebedstijden-container, #container-contact {
     background-color: var(--foreground);
-    padding-top: 12rem;
     padding-bottom: 4rem;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#intro {
+    margin-top: 3rem;
 }
 
 #box, #gebedstijden-intro {

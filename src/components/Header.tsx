@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import logo from '@/assets/images/logo.webp';
+import logo from '@/assets/images/logo2.webp';
 import Link from 'next/link';
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaQuran } from "react-icons/fa";
 import LinkButton from './LinkButton';
+import { useRouter } from 'next/router';
 
 interface Gebedstijden {
     fajr: string;
     dhoehr: string;
     asr: string;
     maghrib: string;
-    ishaa: string; 
+    ishaa: string;
 }
 
 interface Gebed {
@@ -20,19 +21,20 @@ interface Gebed {
 }
 
 const Header = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
     const [gebedstijden, setGebedstijden] = useState<Gebedstijden | null>(null);
     const [nextGebed, setNextGebed] = useState<Gebed | null>(null);
+    const router = useRouter();
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 1) {
-                setIsScrolled(true);
+            const topHeaderHeight = document.getElementById('topHeader')?.offsetHeight || 0;
+            if (window.scrollY > topHeaderHeight) {
+                setIsSticky(true);
             } else {
-                setIsScrolled(false);
+                setIsSticky(false);
             }
         };
-        handleScroll();
         window.addEventListener('scroll', handleScroll);
 
         const fetchGebedstijden = async () => {
@@ -67,7 +69,7 @@ const Header = () => {
 
         const currentTime = new Date();
         const currentTimeString = currentTime.getHours() * 60 + currentTime.getMinutes();
-        
+
         for (let gebed of gebedstijden) {
             if (gebed.tijd && typeof gebed.tijd === 'string' && gebed.tijd.includes(":")) {
                 const [uur, minuut] = gebed.tijd.split(":").map((time) => parseInt(time));
@@ -82,7 +84,7 @@ const Header = () => {
 
     return (
         <>
-            <div id='topHeader' style={{ opacity: isScrolled ? 0 : 1 }}>
+            <div id="topHeader">
                 <div className='nav'>
                     <div className='nav' style={{ gap: 5 }}>
                         <IoIosCall className='icon' />
@@ -102,13 +104,13 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            <div id='header' style={{ marginTop: isScrolled ? '0' : "3rem" }}>
+            <div id="header" className={isSticky ? 'sticky' : ''}>
                 <Image src={logo} alt="logo Amal" width={300} />
                 <div className='nav'>
-                    <Link href="/" className='link'>Home</Link>
-                    <Link href="/over-ons" className='link'>Over ons</Link>
-                    <Link href="/gebedstijden" className='link'>Gebedstijden</Link>
-                    <Link href="/contact" className='link'>Contact</Link>
+                    <Link href="/" style={{ color: router.pathname === '/' ? 'var(--secondary-font)' : '' }} className='link'>Home</Link>
+                    <Link href="/over-ons" style={{ color: router.pathname === '/over-ons' ? 'var(--secondary-font)' : '' }} className='link'>Over ons</Link>
+                    <Link href="/gebedstijden" style={{ color: router.pathname === '/gebedstijden' ? 'var(--secondary-font)' : '' }} className='link'>Gebedstijden</Link>
+                    <Link href="/contact" style={{ color: router.pathname === '/contact' ? 'var(--secondary-font)' : '' }} className='link'>Contact</Link>
                 </div>
                 <div className='nav'>
                     <LinkButton href="/lid-worden" content="Lid worden" />

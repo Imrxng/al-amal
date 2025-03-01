@@ -4,9 +4,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--background);
+    color: var(--foreground);
     border-radius: 20px;
-    background-color: var(--foreground);
+    background-color: var(--background);
     font-weight: 700;
     font-size: large;
 }
@@ -14,15 +14,14 @@
 #topHeader {
     background-color: var(--secondary);
     height: 5rem;
-    position: sticky;  width: 100%;
-    z-index: 1001; 
-    transition: opacity 0.1s ease;
+    position: relative;  
+    width: 100%;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 2rem 2rem;
-        color: var(--background);
+    padding: 2rem;
+    color: var(--background);
     font-weight: bolder;
 }
 
@@ -38,18 +37,23 @@
 
 
 #header {
-    background-color: var(--background);
+    background-color: var(--foreground);
     height: 8rem;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
-    transition: margin-top 0.1s ease;
     width: 100%;
     z-index: 1001;
+    transition: top 0.3s ease;
 }
+
+#header.sticky {
+    width: 100%;
+}
+
 
 #header > img 
 {
@@ -63,6 +67,7 @@
     font-weight: 700;
     font-size: large;
     transition-duration: 0.5s;
+    color: var(--background );
 }
 
 .link:hover {
@@ -71,9 +76,9 @@
 }
 
 .button:hover, .button-grey-bg:hover, .button-white-bg:hover {
-    background-color: var(--background);
-    border: 3px var(--foreground) solid;
-    color: var(--foreground);
+    background-color: var(--foreground);
+    border: 3px var(--background) solid;
+    color: var(--background);
 }
 
 .nav {

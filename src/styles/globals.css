@@ -119,7 +119,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--foreground);
   font-family: "Open Sans", sans-serif;
   height: 100vh;
   margin-top: 0; 

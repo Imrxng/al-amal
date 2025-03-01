@@ -1,8 +1,17 @@
+import Link from 'next/link';
 import React from 'react'
 
 const IntroContact = () => {
     return (
-        <div id='container-contact'>
+        <div id='container-contact' >
+            <div id='container-title-contact'>
+                <h1>Contact</h1>
+                <div id='links-back'>
+                    <Link href={'/'}>Home</Link>
+                    <p>&#8594;</p>
+                    <Link href={'/contact'}>Contact</Link>
+                </div>
+            </div>
             <div id='intro-contact'>
                 <h2>Neem contact met ons op</h2>
                 <p>Heb je een vraag over of opmerking? Maak gerust gebruik van ons contactformulier.

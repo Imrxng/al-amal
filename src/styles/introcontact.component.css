@@ -29,7 +29,22 @@
     transition-duration: 0.5s;
 }
 
-#container-contact,
-#gebedstijden-container {
-    padding-top: 10rem;
+#container-contact {
+    flex-direction: column;
+}
+
+#container-title-contact {
+    background-color: var(--background);
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#links-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
 }
