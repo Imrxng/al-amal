@@ -14,7 +14,7 @@ const Intro = () => {
                     <div>
                         <h1>Welkom bij Moskee Al-Amal</h1>
                         <p>Wij zijn een actieve moskee en vereniging in Deurne, waar onderwijs, cultuur en gemeenschap samenkomen. Met workshops, vakantiekampen, uitstappen en feesten helpen we jongeren hun identiteit te versterken. Daarnaast bieden we ondersteuning voor senioren en vrouwen. Onze deuren staan open voor iedereen, ongeacht nationaliteit of overtuiging!</p>
-                        <Link href={'/contacteer-ons'} className="button" style={{ width: '180px'}}>Contacteer ons</Link>
+                        <Link href={'/contact'} id="introButton" style={{ width: '180px'}}>Contacteer ons</Link>
                     </div>
                     <Image src={mosquePicture} alt='Al-amal gevel' />
                 </div>

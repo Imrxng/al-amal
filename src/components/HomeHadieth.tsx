@@ -1,12 +1,19 @@
 import React from 'react'
 
 
-const HomeHadieth = () => {
+interface HomeHadiethProps {
+  containerHeight: string;
+  hadieth: string;
+  overgeleverd: string;
+  padding: string;
+}
+
+const HomeHadieth = ({containerHeight, hadieth, overgeleverd, padding} : HomeHadiethProps ) => {
   return (
-    <div id='container-al-aqsa'>
+    <div id='container-al-aqsa' style={{height: containerHeight, padding: padding}}>
       <div id='image-al-aqsa'>
-        <q>Iedere keer dat iemand naar de moskee gaat, zal Allah zal voor hem een plaats gereedmaken in het Paradijs.</q>
-        <p>Overgeleverd door Al-Bukhari en Muslim</p>
+        <q>{hadieth}</q>
+        <p>{overgeleverd}</p>
       </div>
     </div>
   )

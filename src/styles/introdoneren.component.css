@@ -1,0 +1,30 @@
+#doneren-payment, #lid-worden-form {
+    color: var(--gray);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#doneren-payment > input {
+    background-color: var(--secondary);
+}
+
+#buttons-doneren {
+    display: flex;
+    gap: 4rem;
+    padding: 1rem 0rem 2rem 0rem;
+}
+
+#buttons-doneren a:first-child:hover {
+    border: none;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+#doneren-container {
+    display: flex;
+}
+
+#doneren-payment > h2, #lid-worden-form > h2 {
+    font-size: 38px;
+}

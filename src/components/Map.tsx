@@ -12,14 +12,14 @@ const Map = () => {
   });
 
   return (
-    <MapContainer center={[51.2206093675261, 4.4592743]} zoom={14} scrollWheelZoom={false} style={{ height: "100%", width:'60%', backgroundColor: '#f9f9f9',borderRadius: '10px'}}>
+    <MapContainer center={[51.22522951193446, 4.460990960172096]} zoom={14} scrollWheelZoom={false} style={{ height: "100%", width:'60%', backgroundColor: '#f9f9f9',borderRadius: '10px'}}>
       <TileLayer
         attribution="&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
-      <Marker position={[51.2206093675261, 4.4592743]} icon={CUSTOM_ICON}>
+      <Marker position={[51.22522951193446, 4.460990960172096]} icon={CUSTOM_ICON}>
         <Popup>
-          <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47c3f78275834721:0x9e464b0a101b01a4?sa=X&ved=1t:8290&ictx=111" target="_blank">Turnhoutsebaan 76B, 2100 Antwerpen</a>
+          <a href="https://www.google.com/maps/place/Moskee+El+Amal+(Educatief+en+Cultureel+De+Hoop)/@51.2251875,4.4606798,18z/data=!4m14!1m7!3m6!1s0x47c3f77a07dee513:0xe9a9b00d116f3085!2sMoskee+El+Amal+(Educatief+en+Cultureel+De+Hoop)!8m2!3d51.2251724!4d4.4605779!16s%2Fg%2F11txwc6dws!3m5!1s0x47c3f77a07dee513:0xe9a9b00d116f3085!8m2!3d51.2251724!4d4.4605779!16s%2Fg%2F11txwc6dws?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">Palinckstraat 124, 2100 Antwerpen</a>
         </Popup>
       </Marker>
     </MapContainer>

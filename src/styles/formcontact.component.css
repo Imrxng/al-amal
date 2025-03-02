@@ -17,7 +17,7 @@
   font-weight: 600;
 }
 
-#map-content > h3 {
+#map-content > h3{
   font-size: 20px;
   padding-bottom: 2rem;
 }
@@ -33,14 +33,16 @@
   font-size: 14px;
 }
 
-#form-contact-content>label {
+#form-contact-content>label, #doneren-payment > label {
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
 #form-contact-content>input,
 #form-contact-content>select,
-#form-contact-content>textarea {
+#form-contact-content>textarea,
+#doneren-payment > input,
+#method {
   background-color: var(--foreground);
   padding: 10px;
   margin-bottom: 1rem;

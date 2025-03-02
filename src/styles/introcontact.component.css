@@ -6,7 +6,7 @@
     color: var(--gray);
 }
 
-#intro-contact>h2 {
+#intro-contact>h2, #doneren-payment > h2, #lid-worden-form > h2 {
     font-size: 40px;
     font-weight: 600;
 }
@@ -33,7 +33,7 @@
     flex-direction: column;
 }
 
-#container-title-contact {
+.container-title {
     background-color: var(--background);
     width: 100%;
     padding: 2rem;
