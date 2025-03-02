@@ -5,7 +5,9 @@
     flex-direction: column;
 }
 
-#doneren-payment > input {
+
+
+#doneren-payment > input, #method {
     background-color: var(--secondary);
 }
 
