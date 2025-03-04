@@ -8,7 +8,7 @@ const OverOns = () => {
     return (
         <div id='over-ons-container'>
             <div id='over-ons-content'>
-                <h2>Moskee Al Amal opgericht in 2016</h2>
+                <h2>ECC De Hoop opgericht in 2016</h2>
                 <p>Onze moskee is verdeeld over drie verdiepingen voor het gebed, inclusief een speciale gebedsruimte voor vrouwen. We streven ernaar om een veilige en gastvrije omgeving te bieden voor alle moslims die ons bezoeken. Of je nu alleen komt of met familie en vrienden, je bent altijd welkom.                </p>
                 <div id='over-ons-icons'>
                     <div className='over-ons-icon-container'>

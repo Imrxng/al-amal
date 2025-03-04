@@ -9,7 +9,7 @@ const Intro = () => {
             <div id='intro'>
                 <div id='box'>
                     <div>
-                        <h1>Welkom bij Moskee Al-Amal</h1>
+                        <h1>Welkom bij ECC De Hoop</h1>
                         <p>Wij zijn een actieve moskee en vereniging in Deurne, waar onderwijs, cultuur en gemeenschap samenkomen. Met workshops, vakantiekampen, uitstappen en feesten helpen we jongeren hun identiteit te versterken. Daarnaast bieden we ondersteuning voor senioren en vrouwen. Onze deuren staan open voor iedereen, ongeacht nationaliteit of overtuiging!</p>
                         <Link href={'/contact'} id="introButton" style={{ width: '180px'}}>Contacteer ons</Link>
                     </div>
