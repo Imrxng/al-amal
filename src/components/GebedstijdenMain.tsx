@@ -14,7 +14,7 @@ const GebedstijdenMain = () => {
       <div id='gebedstijden-content'>
         <div id='gebedstijden-widget'>
           <h2>Vandaag</h2>
-          <iframe src="https://mawaqit.net/nl/w/alamal-antwerpen?showOnly5PrayerTimes=0" frameBorder="0" scrolling="no" style={{width: '100%', height: '550px', border: 'none', overflow: 'hidden'}} className="widget"></iframe>
+          <iframe src="https://mawaqit.net/nl/w/alamal-antwerpen?showOnly5PrayerTimes=0" frameBorder="0" scrolling="no" className="widget"></iframe>
         </div>
         <div id='gebedstijden-download'>
           <h2>Deze maand</h2>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { FaChevronRight } from 'react-icons/fa6';
 
 interface ContainerTitleProps {
     title: string;
@@ -12,7 +13,7 @@ const ContainerTitle = ( {title, link} : ContainerTitleProps ) => {
             <h1>{title}</h1>
             <div id='links-back'>
                 <Link href={'/'}>Home</Link>
-                <p>&#8594;</p>
+                <FaChevronRight />
                 <Link href={link}>{title}</Link>
             </div>
         </div>

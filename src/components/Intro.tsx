@@ -6,9 +6,6 @@ import Link from 'next/link';
 const Intro = () => {
     return (
         <>
-            <div id='background-header'>
-
-            </div>
             <div id='intro'>
                 <div id='box'>
                     <div>

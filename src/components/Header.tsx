@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import logo from '@/assets/images/logo2.webp';
+import logo from '@/assets/images/logo.webp';
 import Link from 'next/link';
 import { IoIosCall, IoIosMail } from "react-icons/io";
 import { FaQuran } from "react-icons/fa";

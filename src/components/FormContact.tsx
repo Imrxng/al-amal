@@ -176,8 +176,7 @@ const FormContact = () => {
             <h3>Handelsnaam:</h3>
             <p>Educatief en Cultureel Centrum De Hoop vzw</p>
             <h3>Vestigingsadres:</h3>
-            <p>Palinckstraat 124,</p>
-            <p>2100 Deurne</p>
+            <p style={{lineHeight: 2}}>Palinckstraat 124, 2100 Deurne</p>
             <h3>Telefoonnummer:</h3>
             <p>+32488413095</p>
             <h3>E-mailadres:</h3>

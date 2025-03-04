@@ -8,7 +8,7 @@
 #form-contact-content {
   display: flex;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding: 4rem 3rem;
   width: 40%;
 }
 
@@ -67,7 +67,7 @@
   background-color: var(--background);
   width: 100%;
   color: var(--foreground);
-  margin: 2rem;
+  margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
   justify-content: space-between;

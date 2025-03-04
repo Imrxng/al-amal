@@ -125,8 +125,8 @@ const IntroDoneren = () => {
             onBlur={handleBlur}
             required
           />
-          <label htmlFor='method'>Betaalmethode</label>
-          <select name='method' id='method' onChange={(e) => setMethod(e.target.value)}>
+          <label htmlFor='method'>Betaalmethode <span id='red'>*</span></label>
+          <select name='method' id='method' required onChange={(e) => setMethod(e.target.value)}>
             <option value="" selected={method === ''} disabled hidden >--Geselecteerd--</option>
             <option value='kbc' selected={method === 'kbc'}>KBC/CBC-Betaalknop</option>
             <option value='belfius' selected={method === 'belfius'} >Belfius Pay Button</option>

@@ -11,15 +11,14 @@
     margin-top: 3rem;
 }
 
+
+
 #box, #gebedstijden-intro {
     display: flex;
     flex-direction: row;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
     background-color: var(--background);
-    margin: 0 10rem;
-    border: 2rem #1b4a5c solid; 
-    border-radius: 10px;
-    padding: 3rem;
+    padding: 5rem 10rem;
     background-size: 20px 20px; 
     justify-content: space-between;
 }
@@ -51,7 +50,7 @@
 }
 
 #box > img {
-    width: 45%;
+    width: auto;
     height: 25rem;
     border-radius: 10px;
 }
