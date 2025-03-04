@@ -22,11 +22,11 @@
 #gebedstijden-widget {
     padding-bottom: 2rem;
 }
-iframe {
+#gebedstijden-widget > iframe {
     width: 100%; 
     height: 90vh;
     border: none;
-  }
+}
 
 #gebedstijden-widget > h2, #gebedstijden-download > h2 {
     font-size: 40px;

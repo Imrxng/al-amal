@@ -1,6 +1,6 @@
-#doneren-payment, #lid-worden-form {
+#doneren-payment {
     color: var(--gray);
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
 }

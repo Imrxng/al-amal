@@ -42,7 +42,9 @@
 #type,
 #form-contact-content>textarea,
 #doneren-payment > input,
-#method {
+#method,
+#customAmount,
+#lid-worden-naam {
   background-color: var(--foreground);
   padding: 10px;
   margin-bottom: 1rem;

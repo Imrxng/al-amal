@@ -1,11 +1,124 @@
+#lid-worden-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
 #buttons-lid-worden {
     display: flex;
-    gap: 4rem;
-    padding: 1rem 0rem 2rem 0rem;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #buttons-lid-worden a:nth-child(2):hover {
     border: none;
     background-color: var(--background);
     color: var(--foreground);
+}
+
+#lid-worden-form>h2 {
+    background-color: var(--background);
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+#lid-worden-form {
+    width: 40%;
+    color: var(--gray);
+    padding-bottom: 2rem;
+}
+
+#lid-worden-form>div>p {
+    color: var(--gray);
+    font-size: 16px;
+    white-space: pre-line;
+}
+
+.lid-worden-form-info {
+    color: var(--gray);
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.lid-worden-form-info>p {
+    font-size: 15px;
+    text-align: right;
+}
+
+.lid-worden-form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lid-worden-form-column {
+    padding-top: 1rem;
+}
+
+#incasso-info {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#lid-worden-form>label {
+    font-weight: 600;
+}
+
+#checkboxes-lid-worden {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+#checkboxes-lid-worden>label:first-child {
+    margin-top: 0.5rem;
+}
+
+#checkboxes-lid-worden>label>input[type='radio'] {
+    padding: 5px;
+    border: var(--gray) solid 1px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+#checkboxes-lid-worden>label>input[type='radio']:focus {
+    border: var(--secondary-font) 1px solid;
+    background-color: var(--secondary-font);
+}
+
+#checkboxes-lid-worden>div {
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+#checkboxes-lid-worden>div>p{
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+#checkboxes-lid-worden>div>label {
+    font-weight: 600;
+}
+
+#customAmount {
+    background-color: var(--secondary);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#lid-worden-naam-container {
+    display: flex;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+#lid-worden-naam {
+    background-color: var(--secondary);
+    width: 50%;
 }

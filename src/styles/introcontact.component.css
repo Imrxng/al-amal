@@ -6,7 +6,9 @@
     color: var(--gray);
 }
 
-#intro-contact>h2, #doneren-payment > h2, #lid-worden-form > h2 {
+#intro-contact>h2,
+#doneren-payment>h2,
+#lid-worden-form>h2 {
     font-size: 40px;
     font-weight: 600;
 }
@@ -51,7 +53,16 @@
     font-weight: bold;
 }
 
-#links-back > svg {
+#links-back>a {
+    transition-duration: 0.5s;
+}
+
+#links-back>a:hover {
+    color: var(--secondary-font);
+    transition-duration: 0.5s;
+}
+
+#links-back>svg {
     font-weight: bolder;
     font-size: 15px;
 }
