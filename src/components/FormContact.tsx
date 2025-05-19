@@ -1,8 +1,11 @@
 import { FormData } from '@/types/types';
 import dynamic from 'next/dynamic';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const FormContact = () => {
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  const [verified, setVerified] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [message, setMessage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -14,7 +17,7 @@ const FormContact = () => {
   const [messageText, setMessageText] = useState<string>('');
 
   const DynamicMap = useMemo(() => dynamic(() => import('@/components/Map'), { ssr: false }), []);
-  
+
   const submitHandler: React.MouseEventHandler<HTMLButtonElement> = async () => {
     setLoading(true);
     setMessage('');
@@ -58,7 +61,7 @@ const FormContact = () => {
     if (phone && !phoneRegex.test(phone)) {
       setLoading(false);
       setError(true);
-      setMessage('Telefoonnummer mag alleen cijfers en '+' bevatten.');
+      setMessage('Telefoonnummer mag alleen cijfers en ' + ' bevatten.');
       return;
     }
 
@@ -76,6 +79,10 @@ const FormContact = () => {
       return;
     }
 
+    const token = recaptchaRef.current?.getValue() ?? null;
+    if (!token) {
+      setMessage('ReCAPTCHA verificatie is verplicht');
+    }
     setMessage('Verzenden..');
 
     const formData: FormData = {
@@ -86,31 +93,28 @@ const FormContact = () => {
       type,
       messageText: trimmedMessage,
     };
-
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('/api/send-email-contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ formData, token }),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error('Er is iets mis gegaan bij het verzenden.');
+        setMessage(`${result.message || JSON.stringify(result)}`);
+        setError(true);
+        return;
       }
 
-      const result = await response.json();
-      if (result.success) {
-        setMessage('Bericht succesvol verzonden!');
-        setError(false);
-      } else {
-        setMessage('Er is een fout opgetreden.');
-        setError(true);
-      }
+      setMessage(result.message);
+      setError(false);
     } catch (error) {
       console.error('Fout bij verzenden:', error);
-      setMessage('Er is een fout opgetreden.');
+      setMessage('Er is een fout opgetreden bij het verzenden van je bericht.');
       setError(true);
     } finally {
       setLoading(false);
@@ -120,7 +124,9 @@ const FormContact = () => {
       setEmail('');
       setType('');
       setMessageText('');
+        recaptchaRef.current?.reset();  
     }
+
   };
 
   return (
@@ -128,16 +134,16 @@ const FormContact = () => {
       <div id='form-contact-content'>
         <label htmlFor='name'>Voornaam <span id='red'>*</span></label>
         <input id='name' type='text' name='name' value={name} required onChange={(e) => setName(e.target.value)} />
-        
+
         <label htmlFor='surname'>Achternaam <span id='red'>*</span></label>
         <input id='surname' type='text' name='surname' required value={surname} onChange={(e) => setSurname(e.target.value)} />
-        
+
         <label htmlFor='phone'>Telefoonnummer</label>
         <input id='phone' type='text' name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
-        
+
         <label htmlFor='email'>E-mailadres <span id='red'>*</span></label>
         <input id='email' type='email' name='email' value={email} required onChange={(e) => setEmail(e.target.value)} />
-        
+
         <label htmlFor='type'>Type vraag <span id='red'>*</span></label>
         <select id='type' name='type' required onChange={(e) => setType(e.target.value)}>
           <option value='' selected={type === ''} disabled hidden>-- Geselecteerd --</option>
@@ -151,12 +157,17 @@ const FormContact = () => {
           <option value='Bestuurlijke zaken' selected={type === 'Bestuurlijke zaken'}>Bestuurlijke zaken</option>
           <option value='Anders..' selected={type === 'Anders..'}>Anders..</option>
         </select>
-        
+
         <label htmlFor='message'>Bericht <span id='red'>*</span></label>
         <textarea id='message' name='message' required cols={30} rows={10} value={messageText} onChange={(e) => setMessageText(e.target.value)}></textarea>
-        
+        <ReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+          ref={recaptchaRef}
+          onChange={() => setVerified(true)}
+          style={{ paddingBottom: '1rem' }}
+        />
         <button id='formbutton' onClick={submitHandler}>Verzenden</button>
-        
+
         <div id='message-container'>
           <p style={{
             color: message === 'Verzenden..' ? 'black' : (error ? 'red' : 'green'),
@@ -165,7 +176,7 @@ const FormContact = () => {
             {message}
             {loading && <span className='spinner'></span>}
           </p>
-        </div>      
+        </div>
       </div>
 
       <div id='map-container'>
@@ -176,7 +187,7 @@ const FormContact = () => {
             <h3>Handelsnaam:</h3>
             <p>Educatief en Cultureel Centrum De Hoop vzw</p>
             <h3>Vestigingsadres:</h3>
-            <p style={{lineHeight: 2}}>Palinckstraat 124, 2100 Deurne</p>
+            <p style={{ lineHeight: 2 }}>Palinckstraat 124, 2100 Deurne</p>
             <h3>Telefoonnummer:</h3>
             <p>+32488413095</p>
             <h3>E-mailadres:</h3>

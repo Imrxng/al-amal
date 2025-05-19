@@ -113,7 +113,6 @@ const Header = () => {
                     <Link href="/contact" style={{ color: router.pathname === '/contact' ? 'var(--secondary-font)' : '' }} className='link'>Contact</Link>
                 </div>
                 <div className='nav'>
-                    <LinkButton href="/lid-worden" content="Lid worden" />
                     <LinkButton href="/doneren" content="Doneren" />
                 </div>
             </div>

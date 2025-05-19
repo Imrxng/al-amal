@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { FaLocationDot, FaSquareFacebook } from "react-icons/fa6";
 import { IoIosMail, IoIosCall } from "react-icons/io";
-import logo from '@/assets/images/logo.webp';
+import logo from '@/assets/images/logo-2.webp';
 import Link from 'next/link';
 import { AiFillInstagram } from 'react-icons/ai';
 

@@ -12,28 +12,29 @@
   width: 40%;
 }
 
-#map-content-info > h3 {
+#map-content-info>h3 {
   font-size: 16px;
   font-weight: 600;
 }
 
-#map-content > h3{
+#map-content>h3 {
   font-size: 20px;
   padding-bottom: 2rem;
 }
 
-#map-content > h2 {
+#map-content>h2 {
   font-size: 40px;
   text-transform: uppercase;
   padding-bottom: 2rem;
   font-weight: 700;
 }
 
-#map-content-info > p {
+#map-content-info>p {
   font-size: 14px;
 }
 
-#form-contact-content>label, #doneren-payment > label {
+#form-contact-content>label,
+#doneren-payment>label {
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
@@ -41,10 +42,19 @@
 #form-contact-content>input,
 #type,
 #form-contact-content>textarea,
-#doneren-payment > input,
+#doneren-payment>input,
 #method,
 #customAmount,
-#lid-worden-naam {
+#lid-worden-naam,
+#address-lid-address,
+#address-lid-postcode,
+#address-lid-stad,
+#address-lid-country,
+#address-lid-telefoon,
+#address-lid-email,
+#address-lid-iban,
+#address-lid-ibanTen,
+#address-lid-bic {
   background-color: var(--foreground);
   padding: 10px;
   margin-bottom: 1rem;
@@ -76,7 +86,7 @@
 }
 
 #red {
-  color: red;
+  color: #b71c1c;
 }
 
 .spinner {
