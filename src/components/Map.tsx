@@ -12,7 +12,7 @@ const Map = () => {
   });
 
   return (
-    <MapContainer center={[51.22522951193446, 4.460990960172096]} zoom={14} scrollWheelZoom={false} style={{ height: "100%", width:'60%', backgroundColor: '#f9f9f9',borderRadius: '10px'}}>
+    <MapContainer center={[51.22522951193446, 4.460990960172096]} zoom={14} scrollWheelZoom={false} style={{ height: "auto", width:'60%', backgroundColor: '#f9f9f9',borderRadius: '10px'}}>
       <TileLayer
         attribution="&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"

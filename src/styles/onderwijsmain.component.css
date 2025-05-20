@@ -7,6 +7,8 @@
 .onderwijs-plan>div>img {
     width: 100%;
     height: auto;
+    border: 4px var(--background) solid;
+    border-radius: 10px;
 }
 
 .onderwijs-intro {
@@ -74,6 +76,9 @@
     gap: 2rem;
 }
 
+.onderwijs-intro > p {
+    width: 100%;
+}
 #onderwijs-brochure-button {
     padding: 1.5rem;
     background-color: var(--background);

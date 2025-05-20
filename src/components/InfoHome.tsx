@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaDonate, FaQuran } from "react-icons/fa";
+import { FaDonate, FaLongArrowAltRight, FaQuran } from "react-icons/fa";
 import Link from 'next/link';
 
 const InfoHome = () => {
@@ -10,7 +10,7 @@ const InfoHome = () => {
             <div className='info-home-text'>
                 <h3>Wat kunt u doen?</h3>
                 <h2>Bijdragen</h2>
-                <Link href={'/doneren'} className='button-white-bg'>DONEREN &#10145;</Link>
+                <Link href={'/doneren'} className='button-white-bg'>DONEREN &nbsp;<FaLongArrowAltRight /></Link>
             </div>
             <FaDonate className='icon'/>
         </div>
@@ -18,7 +18,7 @@ const InfoHome = () => {
             <div className='info-home-text'>
                 <h3>Leeftijd van 6-16 jaar</h3>
                 <h2>Weekendonderwijs</h2>
-                <Link href={'/onderwijs'} className='button-white-bg'>LEES MEER &#10145;</Link>
+                <Link href={'/onderwijs'} className='button-white-bg'>LEES MEER &nbsp;<FaLongArrowAltRight /></Link>
 
             </div>
             <FaQuran className='icon'/>

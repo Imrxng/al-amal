@@ -43,12 +43,28 @@
     .footer-nav>h3 {
         white-space: nowrap;
     }
-    .footer-nav > iframe {
-        height: 100px;
-    }
 
     .info-home {
         gap: 1rem;
+    }
+    #form-contact-container, #lid-worden-container {
+        flex-direction: column;
+    }
+    #form-contact-content {
+        width: 100%;
+        padding: 2rem   3rem;
+    }
+    #map-container {
+        margin: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 92%;
+    }
+    #intro-contact > p, #lid-worden-form, #lid-worden-container-right {
+        width: 100%;
+    }
+    #container-al-aqsa {
+        padding: 2rem 2rem 5rem 2rem !important;
     }
 }
 
@@ -82,7 +98,32 @@
     .info-home {
         justify-content: space-between;
     }
+    #onderwijs-plan-deel-1 {
+        flex-direction: column;
+    }
+    .onderwijs-plan > div > img {
+        height: auto;
+    }
+    #onderwijs-brochure-sfeer-container {
+        flex-direction: column-reverse;
+        padding-top: 2rem;
+    }
 
+    #gebedstijden-widget > iframe {
+        height: 70vh;
+    }
+    #map-container {
+        width: 90%;
+    }
+    #doneren-container {
+        flex-direction: column;
+    }
+    #doneren-payment {
+        padding: 2rem 3rem 1rem 3rem;
+    }
+     #container-al-aqsa {
+        padding: 0rem 2rem 5rem 2rem !important;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -105,6 +146,13 @@
         align-items: baseline;
         justify-content: center;
     }
+    #gebedstijden-widget > iframe {
+        height: 50vh;
+    }
+    .container-title> h1 {
+        font-size: 50px ;
+        line-height: 50px;
+    }
 }
 @media only screen and (max-width: 530px) {
     .info-home > svg {
@@ -116,9 +164,30 @@
     #image-al-aqsa p {
         font-size: 1rem;
     }
+    .container-title {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #onderwijs-brochure-button {
+        margin-top: 0;
+    }
+    #gebedstijden-widget > iframe {
+        height: 40vh;
+    }
+    #map-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #map-container .leaflet-container {
+        height: 50vh !important;
+        width: 100% !important;
+}
+#map-container {
+    width: 86%;
+}
 }
 @media only screen and (max-width: 450px) {
-    #header {
+    #header, #lid-worden-container {
         padding: 0 2rem;
     }
     #box, #over-ons-container {
@@ -140,6 +209,38 @@
         width: 80%;
         height: auto;
     }
+    .container-title, #form-contact-content {
+        padding: 2rem;
+    }
+    #intro-contact, .onderwijs-intro {
+        padding: 0 2rem;
+    }
+    .onderwijs-plan {
+        padding: 5rem 2rem 1rem;
+    }
+    #gebedstijden-intro > h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    #gebedstijden-widget > iframe {
+        height: 30vh;
+    }
+    #buttons-doneren {
+        gap: 1rem;
+    }
+    #doneren-payment {
+        padding: 2rem;
+    }
+    .lid-worden-form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .lid-worden-form-row .label,
+  .lid-worden-form-row .value {
+    width: 100%;
+    text-align: left;
+  }
 }
 @media only screen and (max-width: 350px) {
     #image-al-aqsa q {
@@ -147,5 +248,11 @@
     }
     #image-al-aqsa p {
         font-size: 0.6rem;
+    }
+    #gebedstijden-widget > iframe {
+        height: 25vh;
+    }
+    .footer-nav > iframe {
+        height: 150px;
     }
 }

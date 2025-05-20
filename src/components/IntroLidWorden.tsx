@@ -131,23 +131,32 @@ const IntroLidWorden = () => {
                     </div>
                     <h2>Doorlopende machtiging</h2>
                     <div className="lid-worden-form-container">
-                        <div className='lid-worden-form-column'>
-                            <div className='lid-worden-form-info'><p>Naam:</p></div>
-                            <div className='lid-worden-form-info'><p>Adres:</p></div>
-                            <div className='lid-worden-form-info'><p>Postcode:</p></div>
-                            <div className='lid-worden-form-info'><p>Plaats, land:</p></div>
-                            <div className='lid-worden-form-info'><p>Incassant ID:</p></div>
-                            <div className='lid-worden-form-info'><p>Reden:</p></div>
+                        <div className="lid-worden-form-row">
+                            <p className="label">Naam:</p>
+                            <p className="value">Educatief en Cultureel Centrum De Hoop vzw</p>
                         </div>
-                        <div className='lid-worden-form-column'>
-                            <div className='lid-worden-form-info'><p>Educatief en Cultureel Centrum De Hoop vzw</p></div>
-                            <div className='lid-worden-form-info'><p>Palinckstraat 124</p></div>
-                            <div className='lid-worden-form-info'><p>2100</p></div>
-                            <div className='lid-worden-form-info'><p>Deurne, België</p></div>
-                            <div className='lid-worden-form-info'><p>BE43RANDOM345</p></div>
-                            <div className='lid-worden-form-info'><p>Lidgeld</p></div>
+                        <div className="lid-worden-form-row">
+                            <p className="label">Adres:</p>
+                            <p className="value">Palinckstraat 124</p>
+                        </div>
+                        <div className="lid-worden-form-row">
+                            <p className="label">Postcode:</p>
+                            <p className="value">2100</p>
+                        </div>
+                        <div className="lid-worden-form-row">
+                            <p className="label">Plaats, land:</p>
+                            <p className="value">Deurne, België</p>
+                        </div>
+                        <div className="lid-worden-form-row">
+                            <p className="label">Incassant ID:</p>
+                            <p className="value">BE43RANDOM345</p>
+                        </div>
+                        <div className="lid-worden-form-row">
+                            <p className="label">Reden:</p>
+                            <p className="value">Lidgeld</p>
                         </div>
                     </div>
+
                     <div id='incasso-info'>
                         <p>Door ondertekening van dit formulier geeft u toestemming aan Educatief en Cultureel Centrum de Hoop om doorlopende incassopdrachten ...</p>
                         <p>Als u zich wilt afmelden ...</p>

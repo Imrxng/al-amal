@@ -18,6 +18,17 @@ const OnderwijsMain = () => {
           die zich willen verdiepen in taal, cultuur en memorisatie. We richten ons op studenten die de
           Arabische taal echt onder de knie willen krijgen en bereid zijn om zich daarvoor in te zetten.
           <br /><br />
+          Onze leerlingen worden opgedeeld in niveaugroepen: Baraem 1 en 2 (1ste en 2de leerjaar),
+          Sonbola 1 en 2 (3de en 4de leerjaar), en Al Jisr (5de leerjaar). Tijdens de eerste lessen worden
+          ze verder getest en eventueel herverdeeld op basis van hun niveau.
+          <br /><br />
+          Let op: het aantal plaatsen is beperkt. Wij werken met een wachtlijst, waarop enkel kinderen van
+          leden van de vereniging terecht kunnen. Inschrijving is pas definitief na ondertekening van het
+          schoolreglement en tijdige betaling van het inschrijvingsgeld.
+          <br /><br />
+          Bij bevestiging van deelname ontvangt u een onthaalbrochure met het schoolreglement en jaarrooster.
+          Lees deze zorgvuldig door en neem bij vragen gerust contact op met de directie.
+          <br /><br />
           Meer info over ons programma, de planning en inschrijvingen vindt u verder op deze pagina.
         </p>
       </div>

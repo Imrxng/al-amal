@@ -197,3 +197,35 @@
     font-weight: bolder;
     font-size: large;
 }
+
+.lid-worden-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; 
+  margin: 0 auto;     
+  gap: 1rem;
+  color: var(--gray);
+  
+}
+
+.lid-worden-form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd; /* lichte scheiding */
+  padding: 0.5rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lid-worden-form-row .label {
+  width: 35%;
+  min-width: 120px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.lid-worden-form-row .value {
+  width: 60%;
+  text-align: left;
+}
