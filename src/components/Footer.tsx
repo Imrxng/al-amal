@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import React from 'react'
-import { FaLocationDot, FaSquareFacebook } from "react-icons/fa6";
+import React from 'react';
+import { FaLocationDot, FaSquareFacebook, FaYoutube } from "react-icons/fa6";
 import { IoIosMail, IoIosCall } from "react-icons/io";
 import logo from '@/assets/images/logo-2.webp';
 import Link from 'next/link';
@@ -38,10 +38,16 @@ const Footer = () => {
           <ul>
             <li>
               <FaSquareFacebook />
-              <a href="https://www.facebook.com/moskeealamal/">Facebook</a></li>
+              <a href="https://facebook.com/ECC-De-HOOP">Facebook</a>
+            </li>
             <li>
               <AiFillInstagram />
-              <a href="https://www.instagram.com/moskeealamal/">Instagram</a></li>
+              <a href="https://www.instagram.com/moskeealamal/">Instagram</a>
+            </li>
+            <li>
+              <FaYoutube />
+              <a href="https://www.youtube.com/@eccdehoop1169/featured">Youtube</a>
+            </li>
           </ul>
         </div>
         <div className='footer-nav'>

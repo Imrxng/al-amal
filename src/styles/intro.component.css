@@ -18,7 +18,7 @@
     flex-direction: row;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
     background-color: var(--background);
-    padding: 5rem 10rem;
+    padding: 5rem 3rem;
     background-size: 20px 20px; 
     justify-content: space-between;
 }

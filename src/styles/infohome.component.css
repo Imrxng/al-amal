@@ -3,7 +3,7 @@
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
-    padding: 10rem 10rem 5rem 10rem;
+    padding: 5rem 3rem;
     background-color: var(--foreground);
     color: black;
 }

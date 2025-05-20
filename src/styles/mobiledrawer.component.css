@@ -1,0 +1,79 @@
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 25vw; 
+  height: 100vh;
+  background-color: white;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.drawer-close-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--background);
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawer-link {
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.drawer-link.active {
+  color: var(--secondary-font);
+  font-weight: bold;
+}
+
+.drawer-donate {
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+#menu-icon {
+    display: none;
+}
+
+#nextgebed-drawer {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 0.5rem;
+}
+
+#time {
+    color: var(--background);
+}
+

@@ -7,3 +7,7 @@ export interface FormData  {
     messageText: string;
   };
   
+  export interface Gebed {
+    naam: string;
+    tijd: string;
+}

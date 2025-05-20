@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 interface HomeHadiethProps {
   containerHeight: string;
   hadieth: string;

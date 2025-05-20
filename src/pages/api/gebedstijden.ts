@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import * as cheerio from 'cheerio'; 
-import { log } from "console";
 
 type Data = {
   fajr: string;
@@ -16,27 +15,18 @@ export default async function handler(
 ) {
   async function getPrayerTimesFromWebsite() {
     const url = 'https://mawaqit.net/nl/w/alamal-antwerpen?showOnly5PrayerTimes=0';
-
     try {
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Netwerkfout bij het ophalen van de HTML");
       }
-
       const html = await response.text();
-      
       const $ = cheerio.load(html);
-
       const scriptContent =$.html();
-
       const confDataMatch = scriptContent?.match(/var confData = ({.*?});/);
-
       if (confDataMatch) {
         const confData = JSON.parse(confDataMatch[1]);
-        console.log(confData.times);
-        
         const times = confData.times;
-
         return {
           fajr: times[0] || '',
           dhoehr: times[1] || '',
@@ -47,13 +37,11 @@ export default async function handler(
       } else {
         throw new Error("De configuratiegegevens zijn niet gevonden.");
       }
-
     } catch (error) {
       console.error("Fout bij het ophalen van de gebedstijden:", error);
       throw error;
     }
   }
-
   try {
     const prayerTimes = await getPrayerTimesFromWebsite();
     res.status(200).json(prayerTimes);

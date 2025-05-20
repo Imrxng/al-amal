@@ -1,0 +1,89 @@
+.onderwijs-plan {
+    padding: 5rem 3rem 1rem 3rem;
+    color: var(--gray);
+    border-top: 1px solid #ccc;
+}
+
+.onderwijs-plan>div>img {
+    width: 100%;
+    height: auto;
+}
+
+.onderwijs-intro {
+    padding-bottom: 1rem;
+}
+
+#onderwijs-plan-deel-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#onderwijs-plan-deel-1 > :first-child {
+    flex: 0 0 60%;
+}
+
+#onderwijs-plan-deel-1 > :last-child {
+    flex: 0 0 40%;
+}
+#onderwijs-plan-deel-1>img {
+    border-radius: 10px;
+    border: 4px var(--background) solid;
+}
+
+
+#onderwijs-plan-deel-1>div>h3{
+    font-size: 40px;
+    padding-bottom: 1rem;
+}
+
+.onderwijs-fase {
+    background-color: var(--background);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.onderwijs-fase>h4 {
+    font-size: 25px;
+    padding-bottom: 1rem;
+}
+
+.onderwijs-fase>ul,.onderwijs-blok>ul {
+    list-style: square;
+    padding-left: 2rem;
+}
+.onderwijs-info {
+    font-size: 14px;
+    padding-top: 10px;
+}
+#fase-2-intro {
+    font-size: 17px;
+}
+.onderwijs-blok>h5{
+    font-size: 20px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#onderwijs-brochure-sfeer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#onderwijs-brochure-button {
+    padding: 1.5rem;
+    background-color: var(--background);
+    color: white;
+    margin-top: 3rem;
+    border-radius: 10px;
+    font-size: xx-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

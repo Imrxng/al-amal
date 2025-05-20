@@ -24,7 +24,7 @@ const sendEmail = async (formData: FormData) => {
 
   const adminMailOptions = {
     from: process.env.APP_MAIL_GMAIL,
-    to: 'imgha@hotmail.com',
+    to: 'moskee.alamal@gmail.com',
     subject: 'Nieuw formulier ontvangen',
     html: `
  <div style="
@@ -37,9 +37,6 @@ const sendEmail = async (formData: FormData) => {
   border-radius: 8px;
   border: 2px solid #1F4E5F;
 ">
-  <h2 style="color: #1F4E5F; margin-bottom: 20px; font-weight: 700; font-size: 24px;">
-    Nieuw formulier ontvangen
-  </h2>
   <p style="font-size: 16px; margin-bottom: 16px; color: #58595b;">
     De volgende gegevens zijn verzonden via het contactformulier:
   </p>

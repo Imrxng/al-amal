@@ -39,7 +39,7 @@ const OverOns = () => {
                 </div>
                 <div id='buttons-over-ons'>
                     <Link href={'/lid-worden'} className='button-grey-bg'>Lid worden</Link>
-                    <Link href={'/over-ons'} className='button-grey-bg'>Over ons</Link>
+                    <Link href={'/gebedstijden'} className='button-grey-bg'>Gebedstijden</Link>
                 </div>
             </div>
             <Image src={sfeerbeeld} alt='gebedsruimte' />

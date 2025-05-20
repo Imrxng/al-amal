@@ -1,4 +1,4 @@
-#intro-contact {
+#intro-contact, .onderwijs-intro {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -6,14 +6,14 @@
     color: var(--gray);
 }
 
-#intro-contact>h2,
+#intro-contact>h2,.onderwijs-intro>h2,
 #doneren-payment>h2,
 #lid-worden-form>h2 {
     font-size: 40px;
     font-weight: 600;
 }
 
-#intro-contact>p {
+#intro-contact>p, .onderwijs-intro>p {
     font-size: 16px;
     width: 50%;
 }
