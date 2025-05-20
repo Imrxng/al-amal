@@ -2,7 +2,6 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import LinkButton from '@/components/LinkButton';
 import React from 'react'
-import "@/styles/notfound.component.css";
 
 const NotFound = () => {
   return (
