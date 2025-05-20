@@ -3,12 +3,12 @@ import ContainerTitle from './ContainerTitle';
 import Image from 'next/image';
 import letters from '@/assets/images/sfeer-letters.webp';
 import klas from '@/assets/images/sfeer-klas.webp';
-import { MdDownload, MdFileDownload } from 'react-icons/md';
+import { MdDownload } from 'react-icons/md';
 import Link from 'next/link';
 
 const OnderwijsMain = () => {
   return (
-    <div id="container-contact" className="onderwijs-wrapper">
+    <div id="container-contact">
       <ContainerTitle link={'/onderwijs'} title={'Onderwijs'} />
 
       <div className="onderwijs-intro">

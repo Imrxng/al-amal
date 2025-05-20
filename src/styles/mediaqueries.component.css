@@ -43,6 +43,9 @@
     .footer-nav>h3 {
         white-space: nowrap;
     }
+    .footer-nav > iframe {
+        height: 100px;
+    }
 
     .info-home {
         gap: 1rem;
@@ -105,7 +108,7 @@
 }
 @media only screen and (max-width: 530px) {
     .info-home > svg {
-        font-size: 5rem;
+        min-width: 3rem;
     }
     #image-al-aqsa q {
         font-size: 1.5rem;
@@ -120,5 +123,29 @@
     }
     #box, #over-ons-container {
         padding: 5rem 2rem;
+    }
+    .info-home-text > h2 {
+        font-size: 20px;
+    }
+    .info-home-text > h3 {
+        font-size: 15px;
+    }
+    #over-ons-icons {
+        flex-direction: column;
+    }
+    .over-ons-icon-container{
+        width: 100%;
+    }
+    #header > img {
+        width: 80%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 350px) {
+    #image-al-aqsa q {
+        font-size: 1.2rem;
+    }
+    #image-al-aqsa p {
+        font-size: 0.6rem;
     }
 }
