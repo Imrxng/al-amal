@@ -218,6 +218,9 @@
     #map-container {
         width: 86%;
     }
+    #footer-bottom>p {
+    font-size: 11px;
+}
 }
 
 @media only screen and (max-width: 450px) {
