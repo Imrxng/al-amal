@@ -5,9 +5,11 @@ import { IoIosMail, IoIosCall } from "react-icons/io";
 import logo from '@/assets/images/logo-2.webp';
 import Link from 'next/link';
 import { AiFillInstagram } from 'react-icons/ai';
+import { useRouter } from 'next/router';
 
 
 const Footer = () => {
+  const router  = useRouter();
   return (
     <div id='footer'>
       <div id='footer-top'>
@@ -50,10 +52,13 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className='footer-nav'>
-          <h3><span>Gebed</span>stijden</h3>
-          <iframe src="https://mawaqit.net/nl/w/alamal-antwerpen?showOnly5PrayerTimes=0" frameBorder="0" scrolling="no" className="widget"></iframe>
-        </div>
+        {
+          router.pathname !== '/contact' && 
+          <div className='footer-nav'>
+            <h3><span>Gebed</span>stijden</h3>
+            <iframe src="https://mawaqit.net/nl/w/alamal-antwerpen?showOnly5PrayerTimes=0" frameBorder="0" scrolling="no" className="widget"></iframe>
+          </div>
+        }
       </div>
       <div id='footer-bottom'>
         <p>Copyright &copy; 2025 Al-Amal. Alle rechten voorbehouden.</p>
