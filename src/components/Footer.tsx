@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <div id='footer-bottom'>
-        <p>Copyright &copy; 2025 ECC De Hoop. Alle rechten voorbehouden.</p>
+        <p>Copyright &copy; 2025 Ecc De Hoop. Alle rechten voorbehouden.</p>
         <div id='footer-bottom-links'>
           <Link href={'/privacybeleid'}>Privacybeleid</Link>
           <Link href={'/algemene-voorwaarden'}>Algemene voorwaarden</Link>
