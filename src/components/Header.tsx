@@ -106,7 +106,9 @@ const Header = () => {
                 </div>
             </div>
             <div id="header" className={isSticky ? 'sticky' : ''}>
-                <Image src={logo} alt="logo Amal" width={300} />
+                <Link href="/">
+                    <Image src={logo} alt="logo Amal" width={300} style={{ cursor: 'pointer' }} />
+                </Link>                
                 <div className='nav' id='nav-desk'>
                     <Link href="/" style={{ color: router.pathname === '/' ? 'var(--secondary-font)' : '' }} className='link'>Home</Link>
                     <Link href="/onderwijs" style={{ color: router.pathname === '/onderwijs' ? 'var(--secondary-font)' : '' }} className='link'>Onderwijs</Link>
@@ -117,7 +119,7 @@ const Header = () => {
                     <LinkButton href="/doneren" content="Doneren" />
                 </div>
                 <IoMenuSharp id="menu-icon" onClick={() => setIsDrawerOpen(true)} />
-                <MobileDrawer  nextGebed={nextGebed} isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />   
+                <MobileDrawer nextGebed={nextGebed} isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
             </div>
         </>
     );
