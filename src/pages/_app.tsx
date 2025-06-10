@@ -3,6 +3,7 @@ import "@/styles/header.component.css";
 import "@/styles/footer.component.css";
 import "@/styles/intro.component.css";
 import "@/styles/homehadieth.component.css";
+import "@/styles/jongerenwerkingmain.component.css";
 import "@/styles/overons.component.css";
 import "@/styles/infohome.component.css";
 import "@/styles/gebedstijden.component.css";

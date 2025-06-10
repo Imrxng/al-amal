@@ -12,7 +12,6 @@ const OnderwijsMain = () => {
       <ContainerTitle link={'/workshop-taal-en-cultuur'} title={'Workshop taal en cultuur'} />
 
       <div className="onderwijs-intro">
-        <h2>Welkom bij ECC De Hoop</h2>
         <p>
           ECC De Hoop biedt een vormingstraject in Arabische taal en Qor’an voor gemotiveerde leerlingen
           die zich willen verdiepen in taal, cultuur en memorisatie. We richten ons op studenten die de
@@ -58,8 +57,8 @@ const OnderwijsMain = () => {
               <MdDownload /> Infobrochure
             </Link>
             <Link href='https://c70b409bc3.cbaul-cdnwnd.com/b027f8255ad330065e34077a4d4ea0ac/200000002-51ccd52c8f/arabisch%20alfabet.pdf?ph=c70b409bc3' id='onderwijs-brochure-button' target='_blank' >
-            <MdDownload /> Download de flashkaarten en leer gemakkelijk het Arabisch alfabet
-          </Link>
+              <MdDownload /> Download de flashkaarten en leer gemakkelijk het Arabisch alfabet
+            </Link>
           </div>
         </div>
 

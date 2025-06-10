@@ -13,7 +13,6 @@
 
 #topHeader {
     position: relative;  
-    border-bottom: 1px solid #cccccc53;
     width: 100%;
     color: black;
     display: flex;
@@ -97,4 +96,34 @@
 #nav-desk {
     background-color: var(--secondary);
     padding: 1rem 5rem;   
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    display: flex;
+    gap: 0.25rem;
+}
+.dropdown-content {
+    position: absolute;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 100;
+    min-width: 200px;
+    border-radius: 10px;
+}
+.dropdown-content .link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+.active {
+    color: var(--secondary-font);
+    font-weight: bold;
 }

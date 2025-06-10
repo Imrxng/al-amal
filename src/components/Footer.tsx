@@ -29,7 +29,8 @@ const Footer = () => {
         <div className='footer-nav'>
           <h3><span>Diens</span>ten</h3>
           <ul>
-            <li><Link href={'/onderwijs'}>Onderwijs</Link></li>
+            <li><Link href={'/persoonlijke-ondersteuning'}>Persoonlijke ondersteuning</Link></li>
+            <li><Link href={'/workshop-cultuur-en-taal'}>Workshop cultuur en taal</Link></li>
             <li><Link href={'/contact'}>Contact</Link></li>
           </ul>
         </div>

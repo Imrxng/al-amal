@@ -3,13 +3,12 @@ import Image from 'next/image';
 import logo from '@/assets/images/logo.webp';
 import Link from 'next/link';
 import { IoIosCall, IoIosCloseCircle, IoIosMail } from "react-icons/io";
-import { FaQuran } from "react-icons/fa";
+import { FaAngleDown, FaQuran } from "react-icons/fa";
 import LinkButton from './LinkButton';
 import { useRouter } from 'next/router';
 import { IoMenuSharp } from 'react-icons/io5';
 import MobileDrawer from './MobileDrawer';
 import { Gebed } from '@/types/types';
-
 
 interface Gebedstijden {
     fajr: string;
@@ -19,22 +18,29 @@ interface Gebedstijden {
     ishaa: string;
 }
 
-
 const Header = () => {
     const [isSticky, setIsSticky] = useState<boolean>(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
     const [gebedstijden, setGebedstijden] = useState<Gebedstijden | null>(null);
     const [nextGebed, setNextGebed] = useState<Gebed | null>(null);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const router = useRouter();
 
+    // Huidige dropdown toggle functie
+    const toggleDropdown = (dropdown: string) => {
+        setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+    };
+
+    // Sluit dropdowns bij route-verandering
+    useEffect(() => {
+        setOpenDropdown(null);
+    }, [router.pathname]);
+
+    // Bestaande scroll- en gebedstijden-logica
     useEffect(() => {
         const handleScroll = () => {
             const topHeaderHeight = document.getElementById('topHeader')?.offsetHeight || 0;
-            if (window.scrollY > topHeaderHeight) {
-                setIsSticky(true);
-            } else {
-                setIsSticky(false);
-            }
+            setIsSticky(window.scrollY > topHeaderHeight);
         };
         window.addEventListener('scroll', handleScroll);
 
@@ -43,46 +49,53 @@ const Header = () => {
                 const response = await fetch('/api/gebedstijden');
                 const data = await response.json();
                 setGebedstijden(data);
-
-                if (data) {
-                    setNextGebed(getNextGebed(data));
-                }
+                if (data) setNextGebed(getNextGebed(data));
             } catch (error) {
                 console.error("Fout bij het ophalen van de gebedstijden", error);
             }
         };
-
         fetchGebedstijden();
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const getNextGebed = (data: Gebedstijden) => {
-        const gebedstijden = [
+        const gebeden = [
             { naam: "Fajr", tijd: data.fajr },
             { naam: "Dhuhr", tijd: data.dhoehr },
             { naam: "Asr", tijd: data.asr },
             { naam: "Maghrib", tijd: data.maghrib },
             { naam: "Isha", tijd: data.ishaa }
         ];
-
-        const currentTime = new Date();
-        const currentTimeString = currentTime.getHours() * 60 + currentTime.getMinutes();
-
-        for (let gebed of gebedstijden) {
-            if (gebed.tijd && typeof gebed.tijd === 'string' && gebed.tijd.includes(":")) {
-                const [uur, minuut] = gebed.tijd.split(":").map((time) => parseInt(time));
-                const gebedTijdString = uur * 60 + minuut;
-                if (gebedTijdString > currentTimeString) {
-                    return gebed;
-                }
-            }
-        }
-        return gebedstijden[0];
+        const now = new Date().getHours() * 60 + new Date().getMinutes();
+        return gebeden.find(gebed => {
+            const [uur, minuut] = gebed.tijd.split(":").map(Number);
+            return (uur * 60 + minuut) > now;
+        }) || gebeden[0];
     };
 
+const isActive = (path: string) => {
+    if (router.pathname === path) return true;
+    
+    if (path === '/activiteiten' && (
+        router.pathname === '/workshop-taal-en-cultuur' ||
+        router.pathname === '/jongerenwerking' ||
+        router.pathname === '/seniorenwerking' ||
+        router.pathname === '/samen-tegen-armoede'
+    )) return true;
+    
+    if (path === '/religie' && (
+        router.pathname === '/islamitisch-gebedshuis' ||
+        router.pathname === '/gebedstijden'
+    )) return true;
+    
+    if (path === '/ondersteuning' && (
+        router.pathname === '/persoonlijke-ondersteuning' ||
+        router.pathname === '/mededelingen'
+    )) return true;
+    
+    return false;
+};
     return (
         <>
             <div id="topHeader">
@@ -98,29 +111,89 @@ const Header = () => {
                 </div>
                 <div className='nav' style={{ gap: 5 }}>
                     <FaQuran className='icon' />
-                    {nextGebed ? (
-                        <p id='time'>{nextGebed.naam} {nextGebed.tijd}</p>
-                    ) : (
-                        <p id='time'>Laden...</p>
-                    )}
+                    <p id='time'>{nextGebed ? `${nextGebed.naam} ${nextGebed.tijd}` : "Laden..."}</p>
                 </div>
             </div>
+
             <div id="header" className={isSticky ? 'sticky' : ''}>
                 <Link href="/">
                     <Image src={logo} alt="logo Amal" width={300} style={{ cursor: 'pointer' }} />
                 </Link>                
-                
                 <div id='nav-desk-button'>
                     <LinkButton href="/doneren" content="Doneren" />
                 </div>
-                <IoMenuSharp id="menu-icon" onClick={() => setIsDrawerOpen(true)} />
+                <IoMenuSharp id="menu-icon" onMouseEnter={() => setIsDrawerOpen(true)} />
                 <MobileDrawer nextGebed={nextGebed} isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
             </div>
+
             <div className='nav' id='nav-desk'>
-                    <Link href="/" style={{ color: router.pathname === '/' ? 'var(--secondary-font)' : '' }} className='link'>Home</Link>
-                    <Link href="/workshop-taal-en-cultuur" style={{ color: router.pathname === '/workshop-taal-en-cultuur' ? 'var(--secondary-font)' : '' }} className='link'>Workshop taal en cultuur</Link>
-                    <Link href="/islamitisch-gebedshuis" style={{ color: router.pathname === '/islamitisch-gebedshuis' ? 'var(--secondary-font)' : '' }} className='link'>Islamitisch gebedshuis</Link>
-                    <Link href="/contact" style={{ color: router.pathname === '/contact' ? 'var(--secondary-font)' : '' }} className='link'>Contact</Link>
+                <Link href="/" className={`link ${isActive('/') ? 'active' : ''}`}>Home</Link>
+                
+                <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
+                    <button 
+                        className={`link dropdown-btn ${isActive('/activiteiten') ? 'active' : ''}`}
+                        onMouseEnter={() => toggleDropdown('activiteiten')}
+                    >
+                        Activiteiten <FaAngleDown />
+                    </button>
+                    {openDropdown === 'activiteiten' && (
+                        <div className="dropdown-content">
+                            <Link href="/workshop-taal-en-cultuur" className={`link ${isActive('/workshop-taal-en-cultuur') ? 'active' : ''}`}>
+                                Workshop taal en cultuur
+                            </Link>
+                            <Link href="/jongerenwerking" className={`link ${isActive('/jongerenwerking') ? 'active' : ''}`}>
+                                Jongerenwerking
+                            </Link>
+                            <Link href="/seniorenwerking" className={`link ${isActive('/seniorenwerking') ? 'active' : ''}`}>
+                                Seniorenwerking
+                            </Link>
+                            <Link href="/samen-tegen-armoede" className={`link ${isActive('/samen-tegen-armoede') ? 'active' : ''}`}>
+                                Samen tegen armoede
+                            </Link>
+                        </div>
+                    )}
+                </div>
+
+                <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
+                    <button 
+                        className={`link dropdown-btn ${isActive('/religie') ? 'active' : ''}`}
+                        onMouseEnter={() => toggleDropdown('religie')}
+                    >
+                        Religie <FaAngleDown />
+                    </button>
+                    {openDropdown === 'religie' && (
+                        <div className="dropdown-content">
+                            <Link href="/islamitisch-gebedshuis" className={`link ${isActive('/islamitisch-gebedshuis') ? 'active' : ''}`}>
+                                Islamitisch gebedshuis
+                            </Link>
+                            <Link href="/gebedstijden" className={`link ${isActive('/gebedstijden') ? 'active' : ''}`}>
+                                Gebedstijden
+                            </Link>
+                        </div>
+                    )}
+                </div>
+
+                        
+                <div className="dropdown-container"  onMouseLeave={() => toggleDropdown('')}>
+                    <button 
+                        className={`link dropdown-btn ${isActive('/ondersteuning') ? 'active' : ''}`}
+                        onMouseEnter={() => toggleDropdown('ondersteuning')}
+                    >
+                        Ondersteuning  <FaAngleDown />
+                    </button>
+                    {openDropdown === 'ondersteuning' && (
+                        <div className="dropdown-content">
+                            <Link href="/persoonlijke-ondersteuning" className={`link ${isActive('/persoonlijke-ondersteuning') ? 'active' : ''}`}>
+                                Persoonlijke ondersteuning
+                            </Link>
+                            <Link href="/mededelingen" className={`link ${isActive('/mededelingen') ? 'active' : ''}`}>
+                                Mededelingen
+                            </Link>
+                        </div>
+                    )}
+                </div>
+
+                <Link href="/contact" className={`link ${isActive('/contact') ? 'active' : ''}`}>Contact</Link>
             </div>
         </>
     );

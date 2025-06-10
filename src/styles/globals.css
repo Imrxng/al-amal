@@ -140,3 +140,7 @@ h1 {
 button {
     cursor: pointer;
 }
+
+.strong {
+  font-weight: bolder;
+}

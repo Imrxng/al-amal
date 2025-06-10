@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  min-width: 25vw; 
+  min-width: 75vw; 
   height: 100vh;
   background-color: white;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
@@ -45,6 +45,8 @@
   font-size: 18px;
   color: #333;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .drawer-link.active {
@@ -77,3 +79,16 @@
     color: var(--background);
 }
 
+#nextgebed-drawer>img {
+    width: 2rem;
+    height: 2rem;
+}
+.drawer-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  gap: 0.5rem;
+}

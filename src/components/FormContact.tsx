@@ -147,14 +147,15 @@ const FormContact = () => {
         <label htmlFor='type'>Type vraag <span id='red'>*</span></label>
         <select id='type' name='type' required onChange={(e) => setType(e.target.value)}>
           <option value='' selected={type === ''} disabled hidden>-- Geselecteerd --</option>
-          <option value='Religieuze en persoonlijke vraagstukken' selected={type === 'Religieuze en persoonlijke vraagstukken'}>Religieuze en persoonlijke vraagstukken</option>
-          <option value='Weekendonderwijs' selected={type === 'Weekendonderwijs'}>Weekendonderwijs</option>
-          <option value='Volwassenenonderwijs' selected={type === 'Volwassenenonderwijs'}>Volwassenenonderwijs</option>
+          <option value='Workshop cultuur en taal' selected={type === 'Workshop cultuur en taal'}>Workshop cultuur en taal</option>
+          <option value='Jongerenwerking' selected={type === 'Jongerenwerking'}>Jongerenwerking</option>
+          <option value='Seniorenwerking' selected={type === 'Seniorenwerking'}>Seniorenwerking</option>
+          <option value='Persoonlijke ondersteuning' selected={type === 'Persoonlijke ondersteuning'}>Persoonlijke ondersteuning</option>
+          <option value='Samen tegen armoede' selected={type === 'Samen tegen armoede'}>Samen tegen armoede</option>
           <option value='Islamsponsoren' selected={type === 'Islamsponsoren'}>Islamsponsoren</option>
+          <option value='Gebedshuis' selected={type === 'Gebedshuis'}>Gebedshuis</option>
           <option value='Begeleiding van nieuwe moslims' selected={type === 'Begeleiding van nieuwe moslims'}>Begeleiding van nieuwe moslims</option>
-          <option value='Rondleidingen' selected={type === 'Rondleidingen'}>Rondleidingen</option>
           <option value='ICT en techniek' selected={type === 'ICT en techniek'}>ICT en techniek</option>
-          <option value='Bestuurlijke zaken' selected={type === 'Bestuurlijke zaken'}>Bestuurlijke zaken</option>
           <option value='Anders..' selected={type === 'Anders..'}>Anders..</option>
         </select>
 
