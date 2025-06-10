@@ -30,17 +30,6 @@
     padding-bottom: 2rem;
 }
 
-#over-ons-icons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#over-ons-icons > p {
-    font-size: 18px;
-    padding-bottom: 2rem;
-}
 .button-grey-bg:first-child {
     height: 50px;
     width: 150px;

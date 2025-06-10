@@ -109,17 +109,18 @@ const Header = () => {
                 <Link href="/">
                     <Image src={logo} alt="logo Amal" width={300} style={{ cursor: 'pointer' }} />
                 </Link>                
-                <div className='nav' id='nav-desk'>
-                    <Link href="/" style={{ color: router.pathname === '/' ? 'var(--secondary-font)' : '' }} className='link'>Home</Link>
-                    <Link href="/onderwijs" style={{ color: router.pathname === '/onderwijs' ? 'var(--secondary-font)' : '' }} className='link'>Onderwijs</Link>
-                    <Link href="/gebedstijden" style={{ color: router.pathname === '/gebedstijden' ? 'var(--secondary-font)' : '' }} className='link'>Gebedstijden</Link>
-                    <Link href="/contact" style={{ color: router.pathname === '/contact' ? 'var(--secondary-font)' : '' }} className='link'>Contact</Link>
-                </div>
+                
                 <div id='nav-desk-button'>
                     <LinkButton href="/doneren" content="Doneren" />
                 </div>
                 <IoMenuSharp id="menu-icon" onClick={() => setIsDrawerOpen(true)} />
                 <MobileDrawer nextGebed={nextGebed} isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
+            </div>
+            <div className='nav' id='nav-desk'>
+                    <Link href="/" style={{ color: router.pathname === '/' ? 'var(--secondary-font)' : '' }} className='link'>Home</Link>
+                    <Link href="/workshop-taal-en-cultuur" style={{ color: router.pathname === '/workshop-taal-en-cultuur' ? 'var(--secondary-font)' : '' }} className='link'>Workshop taal en cultuur</Link>
+                    <Link href="/islamitisch-gebedshuis" style={{ color: router.pathname === '/islamitisch-gebedshuis' ? 'var(--secondary-font)' : '' }} className='link'>Islamitisch gebedshuis</Link>
+                    <Link href="/contact" style={{ color: router.pathname === '/contact' ? 'var(--secondary-font)' : '' }} className='link'>Contact</Link>
             </div>
         </>
     );

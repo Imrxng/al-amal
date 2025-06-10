@@ -1,15 +1,15 @@
 import React from 'react';
 import ContainerTitle from './ContainerTitle';
 import Image from 'next/image';
-import letters from '@/assets/images/sfeer-letters.webp';
-import klas from '@/assets/images/sfeer-klas.webp';
+import sfeer from '@/assets/images/sfeer-1.webp';
+import klas from '@/assets/images/sfeer-2.webp';
 import { MdDownload } from 'react-icons/md';
 import Link from 'next/link';
 
 const OnderwijsMain = () => {
   return (
     <div id="container-contact">
-      <ContainerTitle link={'/onderwijs'} title={'Onderwijs'} />
+      <ContainerTitle link={'/workshop-taal-en-cultuur'} title={'Workshop taal en cultuur'} />
 
       <div className="onderwijs-intro">
         <h2>Welkom bij ECC De Hoop</h2>
@@ -36,58 +36,36 @@ const OnderwijsMain = () => {
       <div className="onderwijs-plan">
         <div id='onderwijs-plan-deel-1'>
           <div>
-            <h3>📚 Waar komt uw kind terecht?</h3>
+            <h3>Waar komt uw kind terecht?</h3>
             <p>
-              Bij <strong>ECC De Hoop</strong> bieden wij een gestructureerd en waardevol leertraject in Arabische taal
-              en Qor'an. Ons programma is bedoeld voor gemotiveerde kinderen die op een rustige, begrijpelijke en
-              stapsgewijze manier willen groeien in kennis en memorisatie.
+              Bij ECC De Hoop geloven wij in een pluralistische samenleving waar er ruimte is voor iedereen om eigen etnisch-culturele identiteit te beleven. <br /><br />
+              Wij bieden een gestructureerd en waardevol leertraject aan om het Arabische taal en Qor'an te leren. Ons programma is bedoeld voor gemotiveerde kinderen die op een rustige, begrijpelijke en stapsgewijze manier willen groeien in kennis en memorisatie.  Wij staan open voor iedereen. <br /><br />
+              Wij staan ook open om met externen samen te werken en om efficiënte en innovatieve leermateriaal te gebruiken. Zo hebben wij in 2024 een samenwerking aangegaan met de vrije universiteit van Brussel, om met het Alef programma te werken. Het Alef programma is het enige in Europa dat Arabische taalvaardigheid bij kinderen evalueert op basis van het Europees Referentiekader voor Moderne Vreemde Talen (ERK).  Het leerplan  bevat interculturele elementen die de integratie zullen bevorderen en de communicatie met de ouders over de inhoud van de school kunnen verbeteren.
             </p>
 
             <div className="onderwijs-fase">
-              <h4>🟢 Fase 1: Instaptraject (2 jaar)</h4>
+              <h4>Organisatie van de workshops:</h4>
               <ul>
-                <li>Arabisch alfabet leren lezen en schrijven</li>
-                <li>Basiswoordenschat verwerven</li>
-                <li>Kleine soewar memoriseren</li>
+                <li>Baraem 1 en 2 (1ste en 2de leerjaar)</li>
+                <li>Sonbola 1 en 2 (3de en 4de leerjaar)</li>
+                <li>Al Jisr (5de leerjaar)</li>
               </ul>
-              <p className="onderwijs-info">Gegeven in een klasomgeving met persoonlijke begeleiding.</p>
+              <p className="onderwijs-info">Tijdens de eerste lessen worden ze verder getest en eventueel herverdeeld op basis van hun niveau.</p>
             </div>
 
-
-            <div className="onderwijs-fase">
-              <h4>🔵 Fase 2: Verdiepingstraject</h4>
-              <p id='fase-2-intro'>
-                Na het instaptraject stroomt uw kind door naar een verdiepingsfase met <strong>twee leertrajecten</strong>,
-                elk op een aparte dag.
-              </p>
-
-              <div className="onderwijs-blok">
-                <h5>📖 Traject 1: Qor’an Memoristatie</h5>
-                <ul>
-                  <li><strong>Niveau 1:</strong> Groepsmemoristatie</li>
-                  <li><strong>Niveau 2:</strong> Individuele memoristatie</li>
-                </ul>
-              </div>
-
-              <div className="onderwijs-blok">
-                <h5>🗣️ Traject 2: Arabische Taal</h5>
-                <ul>
-                  <li><strong>Niveau 1:</strong> Beginners</li>
-                  <li><strong>Niveau 2:</strong> Gemiddeld</li>
-                  <li><strong>Niveau 3:</strong> Gevorderd</li>
-                </ul>
-              </div>
-
-              <p className="onderwijs-info">Beide trajecten worden onafhankelijk gevolgd.</p>
-            </div>
-          </div>
-          <Image src={letters} height={100} alt='letters' width={200} />
-        </div>
-        <div id='onderwijs-brochure-sfeer-container'>
-          <Link href='/downloads/Onthaalbrochure-23-24.docx' download={true} id='onderwijs-brochure-button' target='_blank' >
-            <MdDownload /> Infobrochure
+            <p id='lid-worden-warning' style={{ marginBottom: 0 }}>Let op: het aantal plaatsen is beperkt. Wij werken met een wachtlijst, waarop enkel kinderen van leden van de vereniging terecht kunnen. Inschrijving is pas definitief na ondertekening van het huishoudelijke reglement en tijdige betaling van het inschrijvingsgeld. Bij bevestiging van deelname ontvangt u een infobrochure met alle info en jaarrooster. </p>
+            <Link href='/downloads/Onthaalbrochure-23-24.docx' style={{ marginTop: "2rem", marginBottom: "2rem" }} download={true} id='onderwijs-brochure-button' target='_blank' >
+              <MdDownload /> Infobrochure
+            </Link>
+            <Link href='https://c70b409bc3.cbaul-cdnwnd.com/b027f8255ad330065e34077a4d4ea0ac/200000002-51ccd52c8f/arabisch%20alfabet.pdf?ph=c70b409bc3' id='onderwijs-brochure-button' target='_blank' >
+            <MdDownload /> Download de flashkaarten en leer gemakkelijk het Arabisch alfabet
           </Link>
+          </div>
+        </div>
+
+        <div id='onderwijs-brochure-sfeer-container'><br /><br />
           <Image src={klas} height={100} alt='letters' width={100} unoptimized={true} />
+          <Image src={sfeer} alt='sfeer-1' unoptimized={true} />
         </div>
       </div>
     </div>

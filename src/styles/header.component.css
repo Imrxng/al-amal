@@ -23,6 +23,7 @@
     height: 3rem;
     color: var(--background);
     font-weight: bolder;
+    background-color: var(--secondary);
 }
 
 .nav > p {
@@ -92,4 +93,8 @@
     color: var(--background);
     min-width: 1.2rem;
     min-height: 1.2rem;
+}
+#nav-desk {
+    background-color: var(--secondary);
+    padding: 1rem 5rem;   
 }

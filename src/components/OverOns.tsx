@@ -8,35 +8,8 @@ const OverOns = () => {
     return (
         <div id='over-ons-container'>
             <div id='over-ons-content'>
-                <h2>ECC De Hoop opgericht in 2016</h2>
-                <p>Onze moskee is verdeeld over drie verdiepingen voor het gebed, inclusief een speciale gebedsruimte voor vrouwen. We streven ernaar om een veilige en gastvrije omgeving te bieden voor alle moslims die ons bezoeken. Of je nu alleen komt of met familie en vrienden, je bent altijd welkom.                </p>
-                <div id='over-ons-icons'>
-                    <div className='over-ons-icon-container'>
-                        <FaMosque className='icon'/>
-                        <p>Groot ruimte voor het gebed</p>
-                    </div>
-                    <div className='over-ons-icon-container'>
-                        <FaMosque className='icon'/>
-                        <p>Onderwijs voor jeugd</p>
-                    </div>
-                    <div className='over-ons-icon-container'>
-                        <FaMosque className='icon'/>
-                        <p>Vrouwen gebedsruimte</p>
-                    </div>
-                    <div className='over-ons-icon-container'>
-                        <FaMosque className='icon'/>
-                        <p>Khutba</p>
-                    </div>
-                    <div className='over-ons-icon-container'>
-                        <FaMosque className='icon'/>
-                        <p>Groot ruimte voor het gebed</p>
-                    </div>
-                    <div className='over-ons-icon-container'>
-                        <FaMosque className='icon'/>
-                        <p>Gastvrij</p>
-                    </div>
-                    <p>Met de zegen van Allah hebben we een prachtige moskee mogen realiseren. Als je nog niet langs bent geweest, ben je van harte welkom! Maar een moskee is meer dan alleen een gebouw van steen en cement. Jouw steun helpt ons niet alleen bij het onderhoud van de moskee, maar ook bij het organiseren van waardevolle activiteiten. Moge Allah jouw donatie accepteren en je hier overvloedig voor belonen.</p>
-                </div>
+                <h2>Word lid van ECC De Hoop – Samen bouwen we aan verbinding</h2>
+                <p>Bij ECC De Hoop geloven we in de kracht van gemeenschap. Al sinds 2016  zetten we ons vrijwillig in om jongeren, senioren en buurtbewoners een warme plek te bieden waar ontmoeting, groei en solidariteit centraal staan. Van huiswerkbegeleiding en workshops tot bewegingssessies en sociale activiteiten: onze werking leeft dankzij de inzet van velen – maar ook dankzij de steun van mensen zoals jij. <br /><br />Wij ontvangen geen subsidies en zijn volledig afhankelijk van donaties en lidgelden. Door lid te worden, steun je niet alleen een organisatie die zich elke dag inzet voor de buurt, maar draag je ook actief bij aan kansen voor jong en oud.</p>
                 <div id='buttons-over-ons'>
                     <Link href={'/lid-worden'} className='button-grey-bg'>Lid worden</Link>
                     <Link href={'/gebedstijden'} className='button-grey-bg'>Gebedstijden</Link>

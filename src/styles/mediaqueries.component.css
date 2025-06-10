@@ -31,6 +31,7 @@
         margin: 0;
     }
 
+
     #nav-desk,
     #nav-desk-button {
         display: none;
@@ -241,10 +242,6 @@
 
     .info-home-text>h3 {
         font-size: 15px;
-    }
-
-    #over-ons-icons {
-        flex-direction: column;
     }
 
     .over-ons-icon-container {
