@@ -28,29 +28,28 @@
 
 
 #onderwijs-plan-deel-1>div>h3, .tussentitel-jongerenaanbod{
-    font-size: 40px;
+    font-size: 30px;
     padding-bottom: 1rem;
 }
 
-.onderwijs-fase {
-    background-color: var(--background);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 1rem;
-}
+
 
 .onderwijs-fase>h4 {
-    font-size: 25px;
+    padding-top: 1rem;
+    font-size: 30px;
     padding-bottom: 1rem;
 }
 
 .onderwijs-fase>ul,.onderwijs-blok>ul {
-    list-style: square;
+    list-style: disc;
+    font-size: 18px;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
     padding-left: 2rem;
 }
 .onderwijs-info {
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 10px;
 }
 .onderwijs-blok>h5{
@@ -65,9 +64,6 @@
     gap: 2rem;
 }
 
-.onderwijs-intro > p {
-    width: 100%;
-}
 #onderwijs-brochure-button {
     padding: 1.5rem;
     background-color: var(--background);
@@ -79,4 +75,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+#klik-hier {
+    color: #3B82F6;
 }

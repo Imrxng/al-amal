@@ -74,28 +74,28 @@ const Header = () => {
         }) || gebeden[0];
     };
 
-const isActive = (path: string) => {
-    if (router.pathname === path) return true;
-    
-    if (path === '/activiteiten' && (
-        router.pathname === '/workshop-taal-en-cultuur' ||
-        router.pathname === '/jongerenwerking' ||
-        router.pathname === '/seniorenwerking' ||
-        router.pathname === '/samen-tegen-armoede'
-    )) return true;
-    
-    if (path === '/religie' && (
-        router.pathname === '/islamitisch-gebedshuis' ||
-        router.pathname === '/gebedstijden'
-    )) return true;
-    
-    if (path === '/ondersteuning' && (
-        router.pathname === '/persoonlijke-ondersteuning' ||
-        router.pathname === '/mededelingen'
-    )) return true;
-    
-    return false;
-};
+    const isActive = (path: string) => {
+        if (router.pathname === path) return true;
+
+        if (path === '/werkingen' && (
+            router.pathname === '/workshop-taal-en-cultuur' ||
+            router.pathname === '/jongerenwerking' ||
+            router.pathname === '/seniorenwerking' ||
+            router.pathname === '/samen-tegen-armoede'
+        )) return true;
+
+        if (path === '/religie' && (
+            router.pathname === '/gebedshuis' ||
+            router.pathname === '/gebedstijden'
+        )) return true;
+
+        if (path === '/ondersteuning' && (
+            router.pathname === '/persoonlijke-ondersteuning' ||
+            router.pathname === '/mededelingen'
+        )) return true;
+
+        return false;
+    };
     return (
         <>
             <div id="topHeader">
@@ -118,7 +118,7 @@ const isActive = (path: string) => {
             <div id="header" className={isSticky ? 'sticky' : ''}>
                 <Link href="/">
                     <Image src={logo} alt="logo Amal" width={300} style={{ cursor: 'pointer' }} />
-                </Link>                
+                </Link>
                 <div id='nav-desk-button'>
                     <LinkButton href="/doneren" content="Doneren" />
                 </div>
@@ -126,17 +126,18 @@ const isActive = (path: string) => {
                 <MobileDrawer nextGebed={nextGebed} isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
             </div>
 
+
             <div className='nav' id='nav-desk'>
                 <Link href="/" className={`link ${isActive('/') ? 'active' : ''}`}>Home</Link>
-                
+
                 <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
-                    <button 
-                        className={`link dropdown-btn ${isActive('/activiteiten') ? 'active' : ''}`}
-                        onMouseEnter={() => toggleDropdown('activiteiten')}
+                    <button
+                        className={`link dropdown-btn ${isActive('/werkingen') ? 'active' : ''}`}
+                        onMouseEnter={() => toggleDropdown('werkingen')}
                     >
-                        Activiteiten <FaAngleDown />
+                        Werkingen <FaAngleDown />
                     </button>
-                    {openDropdown === 'activiteiten' && (
+                    {openDropdown === 'werkingen' && (
                         <div className="dropdown-content">
                             <Link href="/workshop-taal-en-cultuur" className={`link ${isActive('/workshop-taal-en-cultuur') ? 'active' : ''}`}>
                                 Workshop taal en cultuur
@@ -154,7 +155,7 @@ const isActive = (path: string) => {
                     )}
                 </div>
 
-                <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
+                {/* <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
                     <button 
                         className={`link dropdown-btn ${isActive('/religie') ? 'active' : ''}`}
                         onMouseEnter={() => toggleDropdown('religie')}
@@ -163,7 +164,7 @@ const isActive = (path: string) => {
                     </button>
                     {openDropdown === 'religie' && (
                         <div className="dropdown-content">
-                            <Link href="/islamitisch-gebedshuis" className={`link ${isActive('/islamitisch-gebedshuis') ? 'active' : ''}`}>
+                            <Link href="/gebedshuis" className={`link ${isActive('/gebedshuis') ? 'active' : ''}`}>
                                 Islamitisch gebedshuis
                             </Link>
                             <Link href="/gebedstijden" className={`link ${isActive('/gebedstijden') ? 'active' : ''}`}>
@@ -171,11 +172,11 @@ const isActive = (path: string) => {
                             </Link>
                         </div>
                     )}
-                </div>
+                </div> */}
 
-                        
-                <div className="dropdown-container"  onMouseLeave={() => toggleDropdown('')}>
-                    <button 
+
+                {/* <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
+                    <button
                         className={`link dropdown-btn ${isActive('/ondersteuning') ? 'active' : ''}`}
                         onMouseEnter={() => toggleDropdown('ondersteuning')}
                     >
@@ -191,8 +192,16 @@ const isActive = (path: string) => {
                             </Link>
                         </div>
                     )}
-                </div>
-
+                </div> */}
+                <Link href="/gebedshuis" className={`link ${isActive('/gebedshuis') ? 'active' : ''}`}>
+                    Gebedshuis
+                </Link>
+                <Link href="/persoonlijke-ondersteuning" className={`link ${isActive('/persoonlijke-ondersteuning') ? 'active' : ''}`}>
+                    Persoonlijke ondersteuning
+                </Link>
+                <Link href="/mededelingen" className={`link ${isActive('/mededelingen') ? 'active' : ''}`}>
+                    Mededelingen
+                </Link>
                 <Link href="/contact" className={`link ${isActive('/contact') ? 'active' : ''}`}>Contact</Link>
             </div>
         </>

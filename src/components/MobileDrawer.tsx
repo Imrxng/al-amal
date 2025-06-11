@@ -19,30 +19,27 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
-  // Verbeterde isActive functie voor zowel hoofd- als sublinks
   const isActive = (path: string) => {
     if (router.pathname === path) return true;
-    
-    // Activiteiten sublinks
-    if (path === '/activiteiten' && (
+
+    if (path === '/werkingen' && (
       router.pathname === '/workshop-taal-en-cultuur' ||
       router.pathname === '/jongerenwerking' ||
       router.pathname === '/seniorenwerking' ||
       router.pathname === '/samen-tegen-armoede'
     )) return true;
-    
-    // Religie sublinks
-    if (path === '/religie' && (
-      router.pathname === '/islamitisch-gebedshuis' ||
-      router.pathname === '/gebedstijden'
-    )) return true;
-    
-    // Ondersteuning sublinks
-    if (path === '/ondersteuning' && (
-      router.pathname === '/persoonlijke-ondersteuning' ||
-      router.pathname === '/mededelingen'
-    )) return true;
-    
+
+    // if (path === '/religie' && (
+    //   router.pathname === '/gebedshuis' ||
+    //   router.pathname === '/gebedstijden'
+    // )) return true;
+
+    // // Ondersteuning sublinks
+    // if (path === '/ondersteuning' && (
+    //   router.pathname === '/persoonlijke-ondersteuning' ||
+    //   router.pathname === '/mededelingen'
+    // )) return true;
+
     return false;
   };
 
@@ -56,41 +53,40 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
             </div>
             <nav className="drawer-nav">
               <Link href="/" className={`drawer-link ${isActive('/') ? 'active' : ''}`}>Home</Link>
-              
-              {/* Activiteiten dropdown */}
+
               <div className="drawer-dropdown">
-                <div 
-                  className={`drawer-link drawer-dropdown-btn ${isActive('/activiteiten') ? 'active' : ''}`}
-                  onClick={() => toggleDropdown('activiteiten')}
+                <div
+                  className={`drawer-link drawer-dropdown-btn ${isActive('/werkingen') ? 'active' : ''}`}
+                  onClick={() => toggleDropdown('werkingen')}
                 >
-                  <span>Activiteiten</span>
-                  {openDropdown === 'activiteiten' ? <FaAngleUp /> : <FaAngleDown />}
+                  <span>Werkingen</span>
+                  {openDropdown === 'werkingen' ? <FaAngleUp /> : <FaAngleDown />}
                 </div>
-                {openDropdown === 'activiteiten' && (
+                {openDropdown === 'werkingen' && (
                   <div className="drawer-dropdown-content">
-                    <Link 
-                      href="/workshop-taal-en-cultuur" 
+                    <Link
+                      href="/workshop-taal-en-cultuur"
                       className={`drawer-link ${isActive('/workshop-taal-en-cultuur') ? 'active' : ''}`}
                       onClick={onClose}
                     >
                       Workshop taal en cultuur
                     </Link>
-                    <Link 
-                      href="/jongerenwerking" 
+                    <Link
+                      href="/jongerenwerking"
                       className={`drawer-link ${isActive('/jongerenwerking') ? 'active' : ''}`}
                       onClick={onClose}
                     >
                       Jongerenwerking
                     </Link>
-                    <Link 
-                      href="/seniorenwerking" 
+                    <Link
+                      href="/seniorenwerking"
                       className={`drawer-link ${isActive('/seniorenwerking') ? 'active' : ''}`}
                       onClick={onClose}
                     >
                       Seniorenwerking
                     </Link>
-                    <Link 
-                      href="/samen-tegen-armoede" 
+                    <Link
+                      href="/samen-tegen-armoede"
                       className={`drawer-link ${isActive('/samen-tegen-armoede') ? 'active' : ''}`}
                       onClick={onClose}
                     >
@@ -100,7 +96,7 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
                 )}
               </div>
 
-              {/* Religie dropdown */}
+              {/* Religie dropdown
               <div className="drawer-dropdown">
                 <div 
                   className={`drawer-link drawer-dropdown-btn ${isActive('/religie') ? 'active' : ''}`}
@@ -112,8 +108,8 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
                 {openDropdown === 'religie' && (
                   <div className="drawer-dropdown-content">
                     <Link 
-                      href="/islamitisch-gebedshuis" 
-                      className={`drawer-link ${isActive('/islamitisch-gebedshuis') ? 'active' : ''}`}
+                      href="/gebedshuis" 
+                      className={`drawer-link ${isActive('/gebedshuis') ? 'active' : ''}`}
                       onClick={onClose}
                     >
                       Islamitisch gebedshuis
@@ -127,11 +123,11 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
                     </Link>
                   </div>
                 )}
-              </div>
+              </div> */}
 
               {/* Ondersteuning dropdown */}
-              <div className="drawer-dropdown">
-                <div 
+              {/* <div className="drawer-dropdown">
+                <div
                   className={`drawer-link drawer-dropdown-btn ${isActive('/ondersteuning') ? 'active' : ''}`}
                   onClick={() => toggleDropdown('ondersteuning')}
                 >
@@ -140,15 +136,15 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
                 </div>
                 {openDropdown === 'ondersteuning' && (
                   <div className="drawer-dropdown-content">
-                    <Link 
-                      href="/persoonlijke-ondersteuning" 
+                    <Link
+                      href="/persoonlijke-ondersteuning"
                       className={`drawer-link ${isActive('/persoonlijke-ondersteuning') ? 'active' : ''}`}
                       onClick={onClose}
                     >
                       Persoonlijke ondersteuning
                     </Link>
-                    <Link 
-                      href="/mededelingen" 
+                    <Link
+                      href="/mededelingen"
                       className={`drawer-link ${isActive('/mededelingen') ? 'active' : ''}`}
                       onClick={onClose}
                     >
@@ -156,18 +152,39 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
                     </Link>
                   </div>
                 )}
-              </div>
+              </div> */}
 
-              <Link 
-                href="/contact" 
+              <Link
+                href="/persoonlijke-ondersteuning"
+                className={`drawer-link ${isActive('/persoonlijke-ondersteuning') ? 'active' : ''}`}
+                onClick={onClose}
+              >
+                Persoonlijke ondersteuning
+              </Link>
+              <Link
+                href="/mededelingen"
+                className={`drawer-link ${isActive('/mededelingen') ? 'active' : ''}`}
+                onClick={onClose}
+              >
+                Mededelingen
+              </Link>
+              <Link
+                href="/gebedshuis"
+                className={`drawer-link ${isActive('/gebedshuis') ? 'active' : ''}`}
+                onClick={onClose}
+              >
+                Gebedshuis
+              </Link>
+              <Link
+                href="/contact"
                 className={`drawer-link ${isActive('/contact') ? 'active' : ''}`}
                 onClick={onClose}
               >
                 Contact
               </Link>
-              
-              <Link 
-                href="/doneren" 
+
+              <Link
+                href="/doneren"
                 className="drawer-donate"
                 onClick={onClose}
               >
