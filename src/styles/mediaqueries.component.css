@@ -149,6 +149,9 @@
     #container-2pictures-jongerenwerking>img {
         width: 100vw;
     }
+    .onderwijs-intro > p  {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 750px) {
