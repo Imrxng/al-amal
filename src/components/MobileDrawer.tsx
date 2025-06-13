@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { IoIosCall, IoIosCloseCircle, IoIosMail } from 'react-icons/io';
+import { IoIosCloseCircle } from 'react-icons/io';
 import { useRouter } from 'next/router';
 import { Gebed } from '@/types/types';
 import { FaQuran, FaAngleDown, FaAngleUp } from 'react-icons/fa';
@@ -29,17 +29,6 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
       router.pathname === '/samen-tegen-armoede'
     )) return true;
 
-    // if (path === '/religie' && (
-    //   router.pathname === '/gebedshuis' ||
-    //   router.pathname === '/gebedstijden'
-    // )) return true;
-
-    // // Ondersteuning sublinks
-    // if (path === '/ondersteuning' && (
-    //   router.pathname === '/persoonlijke-ondersteuning' ||
-    //   router.pathname === '/mededelingen'
-    // )) return true;
-
     return false;
   };
 
@@ -52,7 +41,6 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
               <IoIosCloseCircle className="drawer-close-icon" onClick={onClose} />
             </div>
             <nav className="drawer-nav">
-              <Link href="/" className={`drawer-link ${isActive('/') ? 'active' : ''}`}>Home</Link>
 
               <div className="drawer-dropdown">
                 <div
@@ -95,64 +83,6 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
                   </div>
                 )}
               </div>
-
-              {/* Religie dropdown
-              <div className="drawer-dropdown">
-                <div 
-                  className={`drawer-link drawer-dropdown-btn ${isActive('/religie') ? 'active' : ''}`}
-                  onClick={() => toggleDropdown('religie')}
-                >
-                  <span>Religie</span>
-                  {openDropdown === 'religie' ? <FaAngleUp /> : <FaAngleDown />}
-                </div>
-                {openDropdown === 'religie' && (
-                  <div className="drawer-dropdown-content">
-                    <Link 
-                      href="/gebedshuis" 
-                      className={`drawer-link ${isActive('/gebedshuis') ? 'active' : ''}`}
-                      onClick={onClose}
-                    >
-                      Islamitisch gebedshuis
-                    </Link>
-                    <Link 
-                      href="/gebedstijden" 
-                      className={`drawer-link ${isActive('/gebedstijden') ? 'active' : ''}`}
-                      onClick={onClose}
-                    >
-                      Gebedstijden
-                    </Link>
-                  </div>
-                )}
-              </div> */}
-
-              {/* Ondersteuning dropdown */}
-              {/* <div className="drawer-dropdown">
-                <div
-                  className={`drawer-link drawer-dropdown-btn ${isActive('/ondersteuning') ? 'active' : ''}`}
-                  onClick={() => toggleDropdown('ondersteuning')}
-                >
-                  <span>Ondersteuning</span>
-                  {openDropdown === 'ondersteuning' ? <FaAngleUp /> : <FaAngleDown />}
-                </div>
-                {openDropdown === 'ondersteuning' && (
-                  <div className="drawer-dropdown-content">
-                    <Link
-                      href="/persoonlijke-ondersteuning"
-                      className={`drawer-link ${isActive('/persoonlijke-ondersteuning') ? 'active' : ''}`}
-                      onClick={onClose}
-                    >
-                      Persoonlijke ondersteuning
-                    </Link>
-                    <Link
-                      href="/mededelingen"
-                      className={`drawer-link ${isActive('/mededelingen') ? 'active' : ''}`}
-                      onClick={onClose}
-                    >
-                      Mededelingen
-                    </Link>
-                  </div>
-                )}
-              </div> */}
 
               <Link
                 href="/persoonlijke-ondersteuning"

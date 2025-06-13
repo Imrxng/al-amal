@@ -41,8 +41,6 @@ const SamenTegenArmoede = () => {
                     <Image src={sfeer1} alt="Sfeer Jongerenwerking 1" id='foto-armoede' className='sfeer-jongerenwerking' />
                 </div>
             </div>
-            {/* <div id='losse-foto-jongerenwerking'> */}
-            {/* </div> */}
             <div id='container-2pictures-jongerenwerking'>
                     <Image src={sfeer2} alt="Sfeer samen-tegen-armoede 2" id='foto-armoede' className='sfeer-jongerenwerking' />
                     <Image src={sfeer3} alt="Sfeer samen-tegen-armoede 3" id='foto-armoede' className='sfeer-jongerenwerking' />

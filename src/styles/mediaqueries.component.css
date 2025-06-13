@@ -304,10 +304,6 @@
         padding: 5rem 2rem 1rem;
     }
 
-    #gebedstijden-intro>h1 {
-        font-size: 40px;
-        line-height: 55px;
-    }
 
     #gebedstijden-widget>iframe {
         height: 30vh;

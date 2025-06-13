@@ -1,14 +1,3 @@
-#gebedstijden-container {
-    flex-direction: column;
-    padding-bottom: 0rem;
-}
-
-#gebedstijden-intro {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
 #gebedstijden-content {
     background-color: var(--foreground);
     width: 100%;
@@ -44,4 +33,19 @@
     background-color: var(--secondary);
     color: var(--background);
     border: var(--background) solid 3px;
+}
+
+.onderwijs-intro.gebedshuis-intro {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.onderwijs-intro.gebedshuis-intro > img {
+    border: 4px solid var(--background);
+}
+
+.onderwijs-intro.gebedshuis-intro.ondersteuning-intro >div >h2 {
+    font-size: 40px;
+    padding-bottom: 1rem;
 }

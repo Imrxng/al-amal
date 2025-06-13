@@ -1,4 +1,4 @@
-#intro, #gebedstijden-container, #container-contact {
+#intro #container-contact {
     background-color: var(--foreground);
     padding-bottom: 4rem;
     color: white;
@@ -13,7 +13,7 @@
 
 
 
-#box, #gebedstijden-intro {
+#box {
     display: flex;
     flex-direction: row;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
@@ -30,7 +30,7 @@
     width: 50%;
 }
 
-#box > div > h1, #gebedstijden-intro > h1 {
+#box > div > h1 {
     font-size: 60px;
     line-height: 72px;
     background-color: var(--background);

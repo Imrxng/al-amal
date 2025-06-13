@@ -32,8 +32,6 @@
     padding-bottom: 1rem;
 }
 
-
-
 .onderwijs-fase>h4 {
     padding-top: 1rem;
     font-size: 30px;
@@ -49,7 +47,6 @@
     padding-left: 2rem;
 }
 .onderwijs-info {
-    font-size: 16px;
     padding-top: 10px;
 }
 .onderwijs-blok>h5{
@@ -79,4 +76,8 @@
 
 #klik-hier {
     color: #3B82F6;
+}
+
+.onderwijs-fase > a {
+    font-size: 18px;
 }

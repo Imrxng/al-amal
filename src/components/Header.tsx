@@ -128,7 +128,6 @@ const Header = () => {
 
 
             <div className='nav' id='nav-desk'>
-                <Link href="/" className={`link ${isActive('/') ? 'active' : ''}`}>Home</Link>
 
                 <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
                     <button
@@ -155,44 +154,6 @@ const Header = () => {
                     )}
                 </div>
 
-                {/* <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
-                    <button 
-                        className={`link dropdown-btn ${isActive('/religie') ? 'active' : ''}`}
-                        onMouseEnter={() => toggleDropdown('religie')}
-                    >
-                        Religie <FaAngleDown />
-                    </button>
-                    {openDropdown === 'religie' && (
-                        <div className="dropdown-content">
-                            <Link href="/gebedshuis" className={`link ${isActive('/gebedshuis') ? 'active' : ''}`}>
-                                Islamitisch gebedshuis
-                            </Link>
-                            <Link href="/gebedstijden" className={`link ${isActive('/gebedstijden') ? 'active' : ''}`}>
-                                Gebedstijden
-                            </Link>
-                        </div>
-                    )}
-                </div> */}
-
-
-                {/* <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
-                    <button
-                        className={`link dropdown-btn ${isActive('/ondersteuning') ? 'active' : ''}`}
-                        onMouseEnter={() => toggleDropdown('ondersteuning')}
-                    >
-                        Ondersteuning  <FaAngleDown />
-                    </button>
-                    {openDropdown === 'ondersteuning' && (
-                        <div className="dropdown-content">
-                            <Link href="/persoonlijke-ondersteuning" className={`link ${isActive('/persoonlijke-ondersteuning') ? 'active' : ''}`}>
-                                Persoonlijke ondersteuning
-                            </Link>
-                            <Link href="/mededelingen" className={`link ${isActive('/mededelingen') ? 'active' : ''}`}>
-                                Mededelingen
-                            </Link>
-                        </div>
-                    )}
-                </div> */}
                 <Link href="/gebedshuis" className={`link ${isActive('/gebedshuis') ? 'active' : ''}`}>
                     Gebedshuis
                 </Link>

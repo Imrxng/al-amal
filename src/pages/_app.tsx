@@ -13,6 +13,8 @@ import "@/styles/formcontact.component.css";
 import "@/styles/introdoneren.component.css";
 import "@/styles/introlidworden.component.css";
 import "@/styles/onderwijsmain.component.css";
+import "@/styles/mededelingen.component.css";
+import "@/styles/mededelingendetail.component.css";
 import "@/styles/mobiledrawer.component.css";
 import "@/styles/mediaqueries.component.css";
 
