@@ -47,7 +47,6 @@ const SamenTegenArmoede = () => {
                     <Image src={sfeer3} alt="Sfeer samen-tegen-armoede 3" id='foto-armoede' className='sfeer-jongerenwerking' />
             </div>
             <HomeHadieth padding={'3rem'} containerHeight={'35rem'} hadieth={'Iedere keer dat iemand naar de moskee gaat, zal Allah zal voor hem een plaats gereedmaken in het Paradijs.'} overgeleverd={'Overgeleverd door Al-Bukhari en Muslim'} />
-
         </div>
     )
 }
