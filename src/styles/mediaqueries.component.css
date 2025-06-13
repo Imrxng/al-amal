@@ -207,6 +207,14 @@
         flex-direction: column;
         gap: 1rem;
     }
+
+    .onderwijs-intro.gebedshuis-intro {
+        flex-direction: column;
+    }
+    .onderwijs-intro.gebedshuis-intro > img {
+        width: 50%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 530px) {
@@ -301,7 +309,7 @@
     #intro-contact,
     .onderwijs-intro,
     #container-2pictures-jongerenwerking {
-        padding: 0 2rem;
+        padding: 2rem;
     }
 
     .onderwijs-plan {
