@@ -62,7 +62,8 @@
 }
 
 #onderwijs-brochure-button {
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 300px;
     background-color: var(--background);
     color: white;
     border-radius: 10px;

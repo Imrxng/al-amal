@@ -36,7 +36,7 @@ const OnderwijsMain = () => {
                 <li>Al Jisr – voor het 5de leerjaar</li>
               </ul>
               <p className="onderwijs-info">Bij de starttoetsen we het niveau van elke leerling en herverdelen indien nodig..</p>
-              <p >
+              <p ><br />
                👉 Klik <Link href='https://c70b409bc3.cbaul-cdnwnd.com/b027f8255ad330065e34077a4d4ea0ac/200000002-51ccd52c8f/arabisch%20alfabet.pdf?ph=c70b409bc3'  target='_blank' id='klik-hier' >hier</Link> om flashkaarten te downloaden en leer gemakkelijk het Arabisch alfabet.
             </p>
             </div>
@@ -58,7 +58,7 @@ const OnderwijsMain = () => {
 
             <p id='lid-worden-warning' style={{ marginBottom: 0 }}>Let op: het aantal plaatsen is beperkt. Wij werken met een wachtlijst, waarop enkel kinderen van leden van de vereniging terecht kunnen. Inschrijving is pas definitief na ondertekening van het huishoudelijke reglement en tijdige betaling van het inschrijvingsgeld. Bij bevestiging van deelname ontvangt u een infobrochure met alle info en jaarrooster. </p>
             <p id="info-armoede">Na bevestiging van je inschrijving door het bestuur, ontvang je een document met alle praktische informatie en het jaarrooster.</p>
-            <Link href='/downloads/Onthaalbrochure-23-24.docx' style={{ marginTop: "2rem", marginBottom: "2rem" }} download={true} id='onderwijs-brochure-button' target='_blank' >
+            <Link href='/downloads/Onthaalbrochure-23-24.docx' style={{ marginTop: "2rem" }} download={true} id='onderwijs-brochure-button' target='_blank' >
               <MdDownload /> Infobrochure
             </Link>
           </div>

@@ -223,7 +223,8 @@
     }
 
     #onderwijs-brochure-button {
-        margin-top: 0;
+        font-size: 25px;     
+        width: 100%; 
     }
 
     #gebedstijden-widget>iframe {
