@@ -4,6 +4,7 @@ import sfeer1 from '@/assets/images/armoede-1.webp';
 import sfeer2 from '@/assets/images/armoede-2.webp';
 import sfeer3 from '@/assets/images/armoede-3.webp';
 import Image from 'next/image';
+import HomeHadieth from './HomeHadieth';
 
 const SamenTegenArmoede = () => {
     return (
@@ -45,6 +46,8 @@ const SamenTegenArmoede = () => {
                     <Image src={sfeer2} alt="Sfeer samen-tegen-armoede 2" id='foto-armoede' className='sfeer-jongerenwerking' />
                     <Image src={sfeer3} alt="Sfeer samen-tegen-armoede 3" id='foto-armoede' className='sfeer-jongerenwerking' />
             </div>
+            <HomeHadieth padding={'3rem'} containerHeight={'35rem'} hadieth={'Iedere keer dat iemand naar de moskee gaat, zal Allah zal voor hem een plaats gereedmaken in het Paradijs.'} overgeleverd={'Overgeleverd door Al-Bukhari en Muslim'} />
+
         </div>
     )
 }

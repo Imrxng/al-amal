@@ -18,7 +18,7 @@ const OnderwijsMain = () => {
         </p>
       </div>
 
-      <div className="onderwijs-plan">
+      <div className="onderwijs-plan" style={{ paddingBottom: '3rem' }}>
         <div id='onderwijs-plan-deel-1'>
           <div>
             <h3>Wat bieden wij?</h3>

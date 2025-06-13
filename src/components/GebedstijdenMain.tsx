@@ -3,6 +3,7 @@ import React from 'react'
 import ContainerTitle from './ContainerTitle';
 import moskee from '@/assets/images/sfeerbeeld-1.webp';
 import Image from 'next/image';
+import HomeHadieth from './HomeHadieth';
 
 const GebedstijdenMain = () => {
   return (
@@ -32,6 +33,7 @@ const GebedstijdenMain = () => {
             Download gebedstijden
           </Link>
         </div>
+        <HomeHadieth padding={'3rem 0'} containerHeight={'35rem'} hadieth={'Iedere keer dat iemand naar de moskee gaat, zal Allah zal voor hem een plaats gereedmaken in het Paradijs.'} overgeleverd={'Overgeleverd door Al-Bukhari en Muslim'} />
       </div>
     </>
   )

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 interface HomeHadiethProps {
@@ -13,6 +14,7 @@ const HomeHadieth = ({containerHeight, hadieth, overgeleverd, padding} : HomeHad
       <div id='image-al-aqsa'>
         <q>{hadieth}</q>
         <p>{overgeleverd}</p>
+        <Link href={'/doneren'} >Doneren</Link>
       </div>
     </div>
   )
