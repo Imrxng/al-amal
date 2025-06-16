@@ -15,7 +15,7 @@ const OverOns = () => {
                     <Link href={'/gebedstijden'} className='button-grey-bg'>Gebedstijden</Link>
                 </div>
             </div>
-            <Image src={sfeerbeeld} alt='gebedsruimte' />
+            <Image src={sfeerbeeld} alt='Gebedshuis ecc de hoop' />
         </div>
     )
 }

@@ -43,15 +43,15 @@ const JongerenWerkingMain = () => {
                             </ul>
                         </div>
                     </div>
-                    <Image src={sfeer1} alt="Sfeer Jongerenwerking 1" className='sfeer-jongerenwerking' />
+                    <Image src={sfeer1} alt="Jongerenwerking ecc de hoop" className='sfeer-jongerenwerking' />
                 </div>
             </div>
             <div id='losse-foto-jongerenwerking'>
-                <Image src={sfeer2} alt="Sfeer Jongerenwerking 2" className='sfeer-jongerenwerking' unoptimized={true} />
+                <Image src={sfeer2} alt="Jongerenwerking ecc de hoop" className='sfeer-jongerenwerking' unoptimized={true} />
             </div>
             <div id='container-2pictures-jongerenwerking'>
-                <Image src={sfeer3} alt="Sfeer Jongerenwerking 3" className='sfeer-jongerenwerking' />
-                <Image src={sfeer4} alt="Sfeer Jongerenwerking 4" className='sfeer-jongerenwerking' />
+                <Image src={sfeer3} alt="Jongerenwerking ecc de hoop" className='sfeer-jongerenwerking' />
+                <Image src={sfeer4} alt="Jongerenwerking ecc de hoop" className='sfeer-jongerenwerking' />
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import ContainerTitle from './ContainerTitle';
 import Image from 'next/image';
-import logo from '../assets/images/logo-miezaan.webp';
+import sfeer1 from '../assets/images/ondersteuning.webp';
 
 const PersoonlijkeOndersteuningMain = () => {
     return (
@@ -29,7 +29,7 @@ const PersoonlijkeOndersteuningMain = () => {
                         Onze ondersteuning is gratis en vertrouwelijk.
                     </p>
                 </div>
-                <Image src={logo} alt='al miezaan' width={250} />
+                <Image src={sfeer1} alt='Ondersteuning ecc de hoop' width={250} />
             </div>
         </>
     )

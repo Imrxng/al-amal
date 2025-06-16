@@ -65,8 +65,8 @@ const OnderwijsMain = () => {
         </div>
 
         <div id='onderwijs-brochure-sfeer-container'><br /><br />
-          <Image src={klas} height={100} alt='letters' width={100} unoptimized={true} />
-          <Image src={sfeer} alt='sfeer-1' unoptimized={true} />
+          <Image src={klas} height={100} alt='Workshop ecc de hoop' width={100} unoptimized={true} />
+          <Image src={sfeer} alt='Workshop ecc de hoop' unoptimized={true} />
         </div>
       </div>
     </div>

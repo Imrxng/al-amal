@@ -39,12 +39,12 @@ const SamenTegenArmoede = () => {
                             <p id='info-armoede'>Samen bouwen we aan een solidaire buurt waar niemand er alleen voor staat.</p>
                         </div>
                     </div>
-                    <Image src={sfeer1} alt="Sfeer Jongerenwerking 1" id='foto-armoede' className='sfeer-jongerenwerking' />
+                    <Image src={sfeer1} alt="Samen tegen armoede ecc de hoop" id='foto-armoede' className='sfeer-jongerenwerking' />
                 </div>
             </div>
             <div id='container-2pictures-jongerenwerking'>
-                    <Image src={sfeer2} alt="Sfeer samen-tegen-armoede 2" id='foto-armoede' className='sfeer-jongerenwerking' />
-                    <Image src={sfeer3} alt="Sfeer samen-tegen-armoede 3" id='foto-armoede' className='sfeer-jongerenwerking' />
+                    <Image src={sfeer2} alt="Samen tegen armoede ecc de hoop" id='foto-armoede' className='sfeer-jongerenwerking' />
+                    <Image src={sfeer3} alt="Samen tegen armoede ecc de hoop" id='foto-armoede' className='sfeer-jongerenwerking' />
             </div>
             <HomeHadieth padding={'3rem'} containerHeight={'35rem'} hadieth={'Iedere keer dat iemand naar de moskee gaat, zal Allah zal voor hem een plaats gereedmaken in het Paradijs.'} overgeleverd={'Overgeleverd door Al-Bukhari en Muslim'} />
         </div>

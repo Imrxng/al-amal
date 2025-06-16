@@ -106,7 +106,7 @@ const Header = () => {
                     </div>
                     <div className='nav' style={{ gap: 5 }}>
                         <IoIosMail className='icon' />
-                        <a href="mailto:moskee.alamal@gmail.com">moskee.alamal@gmail.com</a>
+                        <a href="mailto:eccdehoop@gmail.com ">eccdehoop@gmail.com </a>
                     </div>
                 </div>
                 <div className='nav' style={{ gap: 5 }}>
@@ -117,7 +117,7 @@ const Header = () => {
 
             <div id="header" className={isSticky ? 'sticky' : ''}>
                 <Link href="/">
-                    <Image src={logo} alt="logo Amal" width={300} style={{ cursor: 'pointer' }} />
+                    <Image src={logo} alt="Logo ecc de hoop" width={300} style={{ cursor: 'pointer' }} />
                 </Link>
                 <div id='nav-desk-button'>
                     <LinkButton href="/doneren" content="Doneren" />
@@ -128,7 +128,12 @@ const Header = () => {
 
 
             <div className='nav' id='nav-desk'>
-
+                <Link
+                href="/"
+                className={`drawer-link ${isActive('/') ? 'active' : ''}`}
+              >
+                Home
+              </Link>
                 <div className="dropdown-container" onMouseLeave={() => toggleDropdown('')}>
                     <button
                         className={`link dropdown-btn ${isActive('/werkingen') ? 'active' : ''}`}

@@ -1,6 +1,7 @@
 import React from 'react'
 import ContainerTitle from './ContainerTitle';
-import sfeer1 from '@/assets/images/sfeer-jongerenwerking-1.webp';
+import sfeer1 from '@/assets/images/senioren.webp';
+import sfeer2 from '@/assets/images/senioren2.webp';
 import Image from 'next/image';
 
 const SeniorenWerkingMain = () => {
@@ -27,7 +28,7 @@ const SeniorenWerkingMain = () => {
                             </ul>
                         </div>
                         <div>
-                            <h2 className='tussentitel-jongerenaanbod'>Activiteitenaanbod (bestaand & aanvullingen):</h2>
+                            <h2 className='tussentitel-jongerenaanbod'>Onze activiteiten:</h2>
                             <ul id='oplijsting-jongerenwerking'>
                                 <li><span className='strong'>Beweegprogramma’s:</span> zoals seniorengym, tai chi, stoelyoga of wandelgroepen – om vitaal en in beweging te blijven.</li>
                                 <li><span className='strong'>Levenslange vorming:</span> infosessies en cursussen over gezondheid, digitale vaardigheden, rechten van ouderen, veiligheid, enz.</li>
@@ -39,12 +40,11 @@ const SeniorenWerkingMain = () => {
                             </ul>
                         </div>
                     </div>
-                <Image src={sfeer1} alt="Sfeer Jongerenwerking 1" className='sfeer-jongerenwerking' />
                 </div>
             </div>
-            <div id='losse-foto-jongerenwerking'>
-            </div>
-            <div id='container-2pictures-jongerenwerking'>
+            <div id='container-2pictures-jongerenwerking' >
+                <Image style={{width: '50%', height: 'auto'}} src={sfeer1} alt="Seniorenwerking ecc de hoop" className='sfeer-jongerenwerking' />
+                <Image style={{width: '50%', height: 'auto'}} src={sfeer2} alt="Seniorenwerking ecc de hoop" className='sfeer-jongerenwerking' />
             </div>
         </div>
     )

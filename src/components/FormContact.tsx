@@ -192,7 +192,7 @@ const FormContact = () => {
             <h3>Telefoonnummer:</h3>
             <p>+32488413095</p>
             <h3>E-mailadres:</h3>
-            <p>moskee.alamal@gmail.com</p>
+            <p>eccdehoop@gmail.com </p>
             <h3>Bankrekeningnummer:</h3>
             <p>BE60 0004 6421 0270</p>
           </div>

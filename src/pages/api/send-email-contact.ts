@@ -24,7 +24,7 @@ const sendEmail = async (formData: FormData) => {
 
   const adminMailOptions = {
     from: process.env.APP_MAIL_GMAIL,
-    to: 'moskee.alamal@gmail.com',
+    to: 'eccdehoop@gmail.com',
     subject: 'Nieuw formulier ontvangen',
     html: `
  <div style="

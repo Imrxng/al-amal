@@ -41,7 +41,13 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, nextGebed 
               <IoIosCloseCircle className="drawer-close-icon" onClick={onClose} />
             </div>
             <nav className="drawer-nav">
-
+              <Link
+                href="/"
+                className={`drawer-link ${isActive('/') ? 'active' : ''}`}
+                onClick={onClose}
+              >
+                Home
+              </Link>
               <div className="drawer-dropdown">
                 <div
                   className={`drawer-link drawer-dropdown-btn ${isActive('/werkingen') ? 'active' : ''}`}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import ContainerTitle from './ContainerTitle';
-import moskee from '@/assets/images/sfeerbeeld-1.webp';
+import moskee from '@/assets/images/gebedshuis.webp';
 import Image from 'next/image';
 import HomeHadieth from './HomeHadieth';
 
@@ -20,7 +20,7 @@ const GebedstijdenMain = () => {
           ECC de Hoop is dus niet alleen een plaats van aanbidding, maar ook een baken van spirituele stabiliteit, culturele identiteit én openheid. Het ondersteunt mensen om hun overtuigingen te beleven,  terwijl het tegelijk uitnodigt tot dialoog en respectvolle uitwisseling met anderen.
         
         </p>
-        <Image src={moskee} alt='gebedsruimte' width={500}/>
+        <Image src={moskee} alt='Gebedshuis ecc de hoop' width={600} height={600}/>
       </div>
       <div id='gebedstijden-content'>
         <div id='gebedstijden-widget'>
