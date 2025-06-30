@@ -30,7 +30,7 @@ const Footer = () => {
           <h3><span>Diens</span>ten</h3>
           <ul>
             <li><Link href={'/persoonlijke-ondersteuning'}>Persoonlijke ondersteuning</Link></li>
-            <li><Link href={'/workshop-cultuur-en-taal'}>Workshop cultuur en taal</Link></li>
+            <li><Link href={'/workshop-taal-en-cultuur'}>Workshop taal en cultuur</Link></li>
             <li><Link href={'/contact'}>Contact</Link></li>
           </ul>
         </div>
@@ -39,15 +39,15 @@ const Footer = () => {
           <ul>
             <li>
               <FaSquareFacebook />
-              <a href="https://facebook.com/ECC-De-HOOP">Facebook</a>
+              {/* <a href="https://facebook.com/ECC-De-HOOP">Facebook</a> */}
             </li>
             <li>
               <AiFillInstagram />
-              <a href="https://www.instagram.com/moskeealamal/">Instagram</a>
+              {/* <a href="https://www.instagram.com/moskeealamal/">Instagram</a> */}
             </li>
             <li>
               <FaYoutube />
-              <a href="https://www.youtube.com/@eccdehoop1169/featured">Youtube</a>
+              {/* <a href="https://www.youtube.com/@eccdehoop1169/featured">Youtube</a> */}
             </li>
           </ul>
         </div>

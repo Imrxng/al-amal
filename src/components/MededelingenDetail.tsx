@@ -3,24 +3,9 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import sfeer from '@/assets/images/sfeerbeeld-1.webp';
 import ContainerTitle from './ContainerTitle';
+import { announcements } from '@/components/data/announcements'; 
 
 const MededelingenDetail = () => {
-    const announcements = [
-        {
-            id: '1',
-            title: 'Nieuwe workshops zomer 2025',
-            body: 'Deze zomer organiseren we een reeks creatieve workshops voor jong en oud. Je kan je inschrijven via onze website...',
-            date: '2025-06-10',
-            imageUrl: '/images/workshops-zomer.jpg',
-        },
-        {
-            id: '2',
-            title: 'Culturele avond met muziek en poëzie',
-            body: 'Op vrijdag 21 juni nodigen we jullie uit voor een avond vol cultuur met lokale artiesten. Gratis toegang!',
-            date: '2025-06-05',
-            imageUrl: '/images/avond-cultuur.jpg',
-        },
-    ];
 
     const router = useRouter();
     const { id } = router.query;
@@ -42,7 +27,7 @@ const MededelingenDetail = () => {
 
                 <div className="image-wrapper-detail">
                     <Image
-                        src={sfeer}
+                        src={announcement.imageUrl}
                         alt={announcement.title}
                         layout="responsive"
                         width={1920}

@@ -17,8 +17,7 @@ const PersoonlijkeOndersteuningMain = () => {
                         <br /><br />
                         Al-Mizaan biedt cultuursensitieve psychologische hulpverlening, met oog voor diversiteit en respect voor elke achtergrond. Ze begeleiden mensen bij mentale uitdagingen en zetten sterk in op sensibilisering en psycho-educatie rond mentale gezondheid. Zo wordt niet alleen hulp geboden, maar ook kennis gedeeld en taboes doorbroken.
                         <br /><br />
-                        <span style={{ fontSize: 20, fontWeight: 'bolder' }}>Waarom al miezaan?</span><br />
-                        We bieden warme en professionele begeleiding met respect voor jouw cultuur en geloof, en met aandacht voor mentaal welzijn en bewustwording. Dankzij onze samenwerking met Al-Mizaan krijg jij de juiste hulp op jouw tempo en met begrip voor jouw situatie. Een intakegesprek via ons doorverwijsformulier is altijd gratis. Neem gerust contact op via info@mijnbalans.be.
+                         Dankzij onze samenwerking met Al-Mizaan krijg jij de juiste hulp op jouw tempo en met begrip voor jouw situatie. Een intakegesprek via ons doorverwijsformulier is altijd gratis. Neem gerust contact op via <a className='link' href="mailto:info@mijnbalans.be">info@mijnbalans.be</a>.
                         <br /><br />
                     </p>
                     <h2>Administratieve ondersteuning</h2>

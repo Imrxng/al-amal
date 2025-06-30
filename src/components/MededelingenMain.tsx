@@ -1,16 +1,9 @@
 import React, { useState, useMemo } from 'react'
 import ContainerTitle from './ContainerTitle'
 import Image from 'next/image'
-import moskee from '@/assets/images/sfeerbeeld-1.webp';
+import { announcements } from '@/components/data/announcements'; 
 
 const MededelingenMain = () => {
-  const announcements = [
-    { id: '1', title: 'Nieuwe workshops zomer 2025', body: 'Deze zomer organiseren we een reeks creatieve workshops voor jong en oud...', date: '2025-06-10', imageUrl: '/images/sfeer-1.webp' },
-    { id: '2', title: 'Culturele avond met muziek en poëzie', body: 'Op vrijdag 21 juni nodigen we jullie uit voor een avond vol cultuur...', date: '2025-06-05', imageUrl: '/images/avond-cultuur.jpg' },
-    { id: '3', title: 'Update COVID-19 maatregelen', body: 'Lees hier de laatste update omtrent COVID-19 regels...', date: '2025-05-30', imageUrl: '/images/covid-update.jpg' },
-    { id: '4', title: 'Nieuwe openingstijden zomer', body: 'In de zomer zijn we geopend van 9u tot 18u...', date: '2025-06-01', imageUrl: '/images/openingstijden.jpg' },
-    { id: '5', title: 'Vrijwilligers gezocht voor festival', body: 'Wil je meehelpen op het zomerfestival? Meld je aan!', date: '2025-06-08', imageUrl: '/images/festival.jpg' },
-  ]
 
   const [searchTerm, setSearchTerm] = useState('')
   const [dateFilter, setDateFilter] = useState('all')
@@ -114,7 +107,7 @@ const MededelingenMain = () => {
               <div className="flex-container">
                 <div className="image-wrapper">
                   <Image
-                  src={moskee}
+                  src={a.imageUrl}
                   alt={a.title}
                   className={`announcement-image ${hoveredId === a.id ? 'hover' : ''}`}
                 />
